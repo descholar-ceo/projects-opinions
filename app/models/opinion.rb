@@ -1,3 +1,3 @@
 class Opinion < ApplicationRecord
-  has_many :opinions
+  belongs_to :user
 end
