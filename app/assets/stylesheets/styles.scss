@@ -11,14 +11,15 @@
 a {
   color: $white-color;
   text-decoration: none;
+  margin-right: 20px;
 
   h1 {
     color: $white-color;
   }
-}
 
-a:visited{
-  color: $white-color;
+  &:visited {
+    color: $white-color;
+  }
 }
 
 body {
@@ -29,14 +30,14 @@ body {
   overflow-x: hidden;
 }
 
-main{
+main {
   display: grid;
   grid-template-columns: 1fr 5fr;
   height: 100vh;
   width: 100vw;
 }
 
-aside{
+aside {
   background-color: $secondary-color;
 }
 
@@ -80,11 +81,6 @@ p,
 .field {
   display: flex;
   flex-direction: row;
-
-  a {
-    color: $white-color;
-    margin-right: 20px;
-  }
 }
 
 .form-inputs {
