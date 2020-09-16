@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :opinions
+  has_many :opinions, foreign_key: :author_id
   has_many :comments
 
   has_many :followings, foreign_key: :follower_id
