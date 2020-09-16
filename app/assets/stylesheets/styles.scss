@@ -1,0 +1,118 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: $black-color;
+}
+
+a {
+  color: $white-color;
+  text-decoration: none;
+
+  h1 {
+    color: $white-color;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: $primary-color;
+  padding: 2rem;
+  margin-bottom: 50px;
+
+  .nav-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+
+.button-info {
+  border: none;
+  outline: none;
+  color: $white-color;
+  display: inline;
+  border-radius: 0.5rem;
+  background-color: $third-color;
+  padding: 0.3rem;
+}
+
+.button-danger {
+  border: none;
+  outline: none;
+  color: $white-color;
+  display: inline;
+  border-radius: 0.5rem;
+  background-color: $red-color;
+  padding: 0.3rem;
+}
+
+p,
+.field {
+  display: flex;
+  flex-direction: row;
+
+  a {
+    color: $white-color;
+    margin-right: 20px;
+  }
+}
+
+.form-inputs {
+  width: 60%;
+  border: 1px solid $primary-color;
+  padding: 50px;
+  border-radius: 15px;
+  margin: 0 auto;
+
+  input {
+    width: 90%;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    outline: none;
+    margin-bottom: 10px;
+  }
+}
+
+.notice {
+  color: $third-color;
+  text-align: center;
+  width: 100%;
+}
+
+.alert {
+  color: $red-color;
+  text-align: center;
+  width: 100%;
+}
+
+table,
+.new-event-btn {
+  margin: 0 auto;
+}
+
+table,
+td {
+  border: 1px solid $third-color;
+  padding: 10px;
+}
+
+.event-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

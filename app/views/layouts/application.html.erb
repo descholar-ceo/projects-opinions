@@ -10,8 +10,28 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+   <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+          <div class="navbar-brand">
+            <%= link_to root_path, class: "navbar-item" do %>
+              <h1 class="title is-5 has-text-white">Private EventBrite</h1>
+            <% end %>
+          </div>
+          <div class="nav-menu">
+            <div class="navbar-end">
+              <div class="field is-grouped">
+                <p class="control">
+                  <%= "display_create_button" %>
+                </p>
+                  <%= "display_user_signup_or_login" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
