@@ -1,29 +1,20 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Opinions</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Author</th>
-      <th>Text</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @opinions.each do |opinion| %>
-      <tr>
-        <td><%= opinion.author_id %></td>
-        <td><%= opinion.text %></td>
-        <td><%= link_to 'Show', opinion %></td>
-        <td><%= link_to 'Edit', edit_opinion_path(opinion) %></td>
-        <td><%= link_to 'Destroy', opinion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Opinion', new_opinion_path %>
+<div class="homepage-container">
+  <div class="opinion-list">
+    <div class="white-bg width-100">
+      <%=form_for(@opinion) do |f| %>
+      <div class="field">
+        <%= f.label :text, "Do you have some opinion on you mind?" %><br />
+        <%= f.text_area(
+          :text,
+          autofocus: true,
+          autocomplete: "text",
+          class: 'rounded-corners-half width-90 centered-horizontal',
+          rows:"5",
+          placeholder:"Post a new opinion here..."
+          )%>
+      </div>
+      <%end%>
+    </div>
+  </div>
+  <div class="homepage-right-side">rrrrrrrrrrrrrr</div>
+</div>
