@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :followings
   resources :opinions
   devise_for :users
