@@ -1,0 +1,45 @@
+@import 'variables';
+
+// buttons
+%button {
+  display: inline-block;
+  border: none;
+  margin: 0.2rem;
+  outline: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.rounded-corners-half,
+%rounded-corners-half {
+  border-radius: 0.5rem;
+}
+
+.white-text,
+%white-text {
+  color: $white-color;
+}
+
+.rounded-corners-full {
+  border-radius: 1rem;
+}
+
+.button-primary {
+  @extend %button;
+  @extend %white-text;
+  @extend %rounded-corners-half;
+
+  background-color: $primary-color;
+}
+
+.button-secondary {
+  @extend %button;
+  @extend %white-text;
+  @extend %rounded-corners-half;
+
+  background-color: $secondary-color;
+}
+
+.centered-horizontal {
+  margin: 0 auto;
+}
