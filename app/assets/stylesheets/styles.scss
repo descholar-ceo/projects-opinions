@@ -17,6 +17,10 @@ a {
   }
 }
 
+a:visited{
+  color: $white-color;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -25,14 +29,25 @@ body {
   overflow-x: hidden;
 }
 
-nav {
+main{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+aside{
+  background-color: $secondary-color;
+}
+
+header {
   width: 100%;
   height: 80px;
   background-color: $primary-color;
   padding: 2rem;
   margin-bottom: 50px;
 
-  .nav-container {
+  nav {
     width: 90%;
     display: flex;
     flex-direction: row;

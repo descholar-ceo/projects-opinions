@@ -10,28 +10,34 @@
   </head>
 
   <body>
-   <!-- Navbar -->
-    <nav>
-        <div class="nav-container">
-          <div class="navbar-brand">
-            <%= link_to root_path, class: "navbar-item" do %>
-              <h1 class="title is-5 has-text-white">ProjectsOpinions</h1>
-            <% end %>
-          </div>
-          <div class="nav-menu">
-            <div class="navbar-end">
-              <div class="field is-grouped">
-                <p class="control">
-                  <%= display_create_button %>
-                </p>
-                  <%= display_user_signup_or_login %>
-              </div>
+      <main>
+        <aside></aside>
+        <div class="main-page">
+            <header>
+              <nav class="nav-container">
+                <div class="navbar-brand">
+                  <%= link_to root_path, class: "navbar-item" do %>
+                    <h1 class="title is-5 has-text-white">ProjectsOpinions</h1>
+                  <% end %>
+                </div>
+                <div class="nav-menu">
+                  <p>
+                    <%= display_create_button %>
+                  </p>
+                  <p>
+                    <%= display_user_signup_or_login %>
+                  </p>
+                </div>
+              </nav>
+            </header>
+            <div class="notification-place">
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
             </div>
-          </div>
+            <div class="main-content">
+              <%= yield %>
+            </div>
         </div>
-      </nav>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    <%= yield %>
+      </main>
   </body>
 </html>
