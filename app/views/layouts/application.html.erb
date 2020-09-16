@@ -15,11 +15,13 @@
         <div class="main-page">
             <header>
               <nav class="nav-container">
-                <div class="navbar-brand">
-                  <%= link_to root_path, class: "navbar-item" do %>
-                    <h1 class="title is-5 has-text-white">ProjectsOpinions</h1>
+                <section>
+                  <%= link_to root_path do %>
+                    <h1 class="circled-element">
+                    <%= image_tag 'opinions-icon.svg', class:'logo' %>
+                    </h1>
                   <% end %>
-                </div>
+                </section>
                 <div class="nav-menu">
                   <p>
                     <%= display_create_button %>

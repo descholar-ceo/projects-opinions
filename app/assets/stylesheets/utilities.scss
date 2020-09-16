@@ -10,18 +10,21 @@
   cursor: pointer;
 }
 
-.rounded-corners-half,
-%rounded-corners-half {
-  border-radius: 0.5rem;
-}
-
 .white-text,
 %white-text {
   color: $white-color;
 }
 
+.rounded-corners-half,
+%rounded-corners-half {
+  border-radius: 0.5rem;
+}
+
 .rounded-corners-full {
   border-radius: 1rem;
+}
+.circled-element{
+  border-radius: 100%;
 }
 
 .button-primary {

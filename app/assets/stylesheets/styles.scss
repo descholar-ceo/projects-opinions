@@ -43,9 +43,8 @@ aside {
 
 header {
   width: 100%;
-  height: 80px;
+  height: fit-content;
   background-color: $primary-color;
-  padding: 2rem;
   margin-bottom: 10px;
 
   nav {
@@ -54,6 +53,16 @@ header {
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
+    padding-top: 0.5rem;
+
+    h1{
+      height: fit-content;
+      width: fit-content;
+      padding: 0.5rem;
+      border: 1px solid $white-color;
+      display: grid;
+      place-items: center;
+    }
   }
 }
 
@@ -103,4 +112,9 @@ td {
   text-align: center;
   margin-top: 3%;
   margin-bottom: 10px;
+}
+
+.logo{
+  width: 30px;
+  height: 30px;
 }
