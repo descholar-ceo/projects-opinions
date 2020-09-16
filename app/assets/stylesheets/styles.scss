@@ -102,15 +102,17 @@ header {
   height: fit-content;
 }
 
-.homepage-container{
+.homepage-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  .opinion-list{
+
+  .opinion-list {
     border: 2px solid $fith-color;
     height: 100%;
     width: 100%;
   }
-  .homepage-right-side{
+
+  .homepage-right-side {
     border: 2px solid $fith-color;
     height: 100%;
     width: 100%;
