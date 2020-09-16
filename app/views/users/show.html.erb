@@ -1,0 +1,15 @@
+<div>
+  <%=@user.email%>
+  <h3>All my followers</h3>
+  <%@user.my_followers.each do |follower|%>
+  <div>
+  <%=follower.email%>
+  </div>
+  <%end%>
+  <h3>I am following</h3>
+  <%@user.followeds.each do |follower|%>
+  <div>
+  <%=follower.email%>
+  </div>
+  <%end%>
+</div>
