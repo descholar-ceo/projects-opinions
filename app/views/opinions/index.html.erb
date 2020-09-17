@@ -8,7 +8,7 @@
         <li></li>
       </ul>
     </nav>
-    <div class="opinion-form white-bg width-95">
+    <div class="opinion-form white-bg width-95 padding-y-1 rounded-corners-half">
       <%=form_for(@opinion) do |f| %>
       <div class="width-100">
         <h3 class="width-95 centered-horizontal padding-y-1">
@@ -26,8 +26,16 @@
       </div>
       <%end%>
     </div>
-    <div class="opinion-listing">
-      
+    <div class="opinion-listing white-bg width-95 margin-y-1 padding-y-1 rounded-corners-half">
+      <div class="individual-opinion-container width-95 centered-horizontal">
+        <%=image_tag "opinions-icon.svg", class:'width-100 rounded-corners-half'%>
+        <div class="opinion-content">
+          <h3>AuthorName</h3>
+          <div>
+            Opinion body
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="homepage-right-side">rrrrrrrrrrrrrr</div>

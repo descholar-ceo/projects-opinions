@@ -153,3 +153,9 @@ header {
 .opinion-text-area {
   outline: none;
 }
+
+.individual-opinion-container{
+  background-color: $secondary-color;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+}
