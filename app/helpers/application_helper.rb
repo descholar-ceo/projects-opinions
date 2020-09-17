@@ -9,13 +9,4 @@ module ApplicationHelper
     end
     display.html_safe
   end
-
-  def display_create_button
-    button_display = ''
-    if user_signed_in?
-      button_display << link_to('My opinions', opinions_path, class: 'button-secondary')
-      button_display << link_to('New opinion', new_opinion_path, class: 'button-secondary')
-    end
-    button_display.html_safe
-  end
 end
