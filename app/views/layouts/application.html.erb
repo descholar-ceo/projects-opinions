@@ -4,7 +4,8 @@
     <title>ProjectsOpinions</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -25,6 +26,7 @@
                 <div class="nav-menu">
                   <p>
                     <%= display_create_button %>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
                   </p>
                   <p>
                     <%= display_user_signup_or_login %>

@@ -8,7 +8,7 @@
   color: $black-color;
 }
 
-li{
+li {
   list-style-type: none;
 }
 
@@ -20,7 +20,6 @@ a {
   h1 {
     color: $white-color;
   }
-
 }
 
 body {
@@ -131,6 +130,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 6fr;
     cursor: pointer;
+
     .opinion-li {
       border-bottom: 2px solid $primary-color;
     }
