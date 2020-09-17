@@ -67,7 +67,15 @@
   background-color: $primary-color;
 }
 
+// borders
+.bordered-b-third{
+  border-bottom: 1px solid $third-color;
+}
+
 // text
 .text-fith-color {
   color: $fith-color;
+}
+.text-primary-color {
+  color: $primary-color;
 }

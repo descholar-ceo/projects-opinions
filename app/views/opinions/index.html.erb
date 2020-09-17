@@ -1,6 +1,6 @@
 <div class="homepage-container">
   <div class="opinion-list">
-    <nav class="opinion-list-nav width-100 margin-b-1">
+    <nav class="opinion-list-nav width-100 margin-b-1 bordered-b-third">
       <ul class="width-95 centered-horizontal margin-b-0">
         <li class="padding-1 opinion-li">OPINIONS</li>
         <li></li>
@@ -26,7 +26,10 @@
       </div>
       <%end%>
     </div>
-    <div class="opinion-listing white-bg width-95 margin-y-1 padding-y-1 rounded-corners-half">
+    <div class="white-bg width-95 margin-y-1 padding-y-1 rounded-corners-half">
+      <h2 class="text-primary-color bordered-b-third width-95 padding-y-1 centered-horizontal">
+      <%=@opinions.size%> OPINIONS IN TOTAL</h2>
+      <div class="margin-y-1 width-100"></div>
       <%@opinions.each do |opinion|%>
         <div class="individual-opinion-container width-95 centered-horizontal">
           <%=image_tag "opinions-icon.svg", class:'width-100 rounded-corners-half primary-bg'%>
@@ -40,5 +43,9 @@
       <%end%>
     </div>
   </div>
-  <div class="homepage-right-side">rrrrrrrrrrrrrr</div>
+<div class="homepage-right-side">
+<div class="profiles-listing">
+  
+</div>
+</div>
 </div>

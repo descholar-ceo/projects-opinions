@@ -102,10 +102,10 @@ header {
 
 .homepage-container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
 
   .opinion-list {
-    border: 2px solid $fith-color;
+    border: 1px solid $fith-color;
     height: 100%;
     width: 100%;
     display: flex;
@@ -114,7 +114,6 @@ header {
   }
 
   .homepage-right-side {
-    border: 1px solid $fith-color;
     height: 100%;
     width: 100%;
   }
@@ -127,8 +126,6 @@ header {
 }
 
 .opinion-list-nav {
-  border-bottom: 1px solid $third-color;
-
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 6fr;
