@@ -12,7 +12,7 @@
       <%=form_for(@opinion) do |f| %>
       <div class="width-100">
         <h3 class="width-95 centered-horizontal padding-y-1">
-          <%= f.label :text, "DO YOU HAVE SOME OPINION ON YOUR MIND?", class:"opinion-form-heading" %>
+          <%= f.label :text, "DO YOU HAVE SOME OPINION ON YOUR MIND?", class:"text-fith-color" %>
         </h3>
         <div class="new-opinion-container">
         <%= f.text_area(
@@ -27,15 +27,17 @@
       <%end%>
     </div>
     <div class="opinion-listing white-bg width-95 margin-y-1 padding-y-1 rounded-corners-half">
-      <div class="individual-opinion-container width-95 centered-horizontal">
-        <%=image_tag "opinions-icon.svg", class:'width-100 rounded-corners-half'%>
-        <div class="opinion-content">
-          <h3>AuthorName</h3>
-          <div>
-            Opinion body
+      <%@opinions.each do |opinion|%>
+        <div class="individual-opinion-container width-95 centered-horizontal">
+          <%=image_tag "opinions-icon.svg", class:'width-100 rounded-corners-half primary-bg'%>
+          <div class="opinion-content margin-x-1">
+            <h3>AuthorName</h3>
+            <p class="text-fith-color margin-y-1">
+              <%=opinion.text%>
+            </p>
           </div>
         </div>
-      </div>
+      <%end%>
     </div>
   </div>
   <div class="homepage-right-side">rrrrrrrrrrrrrr</div>

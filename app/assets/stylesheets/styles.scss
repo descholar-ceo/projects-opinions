@@ -44,7 +44,6 @@ aside {
 header {
   width: 100%;
   height: fit-content;
-  background-color: $primary-color;
 
   nav {
     width: 90%;
@@ -121,10 +120,6 @@ header {
   }
 }
 
-.opinion-form-heading {
-  color: $fith-color;
-}
-
 .new-opinion-container {
   display: flex;
   flex-direction: column;
@@ -155,7 +150,6 @@ header {
 }
 
 .individual-opinion-container{
-  background-color: $secondary-color;
   display: grid;
   grid-template-columns: 1fr 8fr;
 }
