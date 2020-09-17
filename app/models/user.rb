@@ -14,6 +14,6 @@ class User < ApplicationRecord
   has_many :my_followers, through: :followers, source: :user
 
   def who_to_follow
-    User.all.reject { |curr_user| curr_user.include? followeds }
+    User.all.reject { |curr_user| followeds.include? curr_user }
   end
 end

@@ -44,8 +44,21 @@
     </div>
   </div>
 <div class="homepage-right-side">
-<div class="profiles-listing">
-  
-</div>
+  <div class="white-bg width-95 margin-y-1 padding-y-1 rounded-corners-half">
+    <h2 class="text-primary-color bordered-b-third width-95 padding-y-1 centered-horizontal">
+    WHO TO FOLLOW</h2>
+    <div class="margin-y-1 width-100"></div>
+    <%@who_to_follow.each do |to_follow|%>
+      <div class="individual-opinion-container width-95 centered-horizontal">
+        <%=image_tag "opinions-icon.svg", class:'width-100 rounded-corners-half primary-bg'%>
+        <div class="opinion-content margin-x-1">
+          <h3>AuthorName</h3>
+          <p class="text-fith-color margin-y-1">
+            <%=to_follow.email%>
+          </p>
+        </div>
+      </div>
+    <%end%>
+  </div>
 </div>
 </div>
