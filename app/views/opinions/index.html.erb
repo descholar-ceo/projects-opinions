@@ -1,19 +1,33 @@
 <div class="homepage-container">
   <div class="opinion-list">
-    <div class="white-bg width-100">
+    <nav class="opinion-list-nav width-100 margin-b-1">
+      <ul class="width-95 centered-horizontal margin-b-0">
+        <li class="padding-1 opinion-li">OPINIONS</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+    <div class="opinion-form white-bg width-95">
       <%=form_for(@opinion) do |f| %>
-      <div class="field">
-        <%= f.label :text, "Do you have some opinion on you mind?" %><br />
+      <div class="width-100">
+        <h3 class="width-95 centered-horizontal padding-y-1">
+          <%= f.label :text, "DO YOU HAVE SOME OPINION ON YOUR MIND?", class:"opinion-form-heading" %>
+        </h3>
+        <div class="new-opinion-container">
         <%= f.text_area(
           :text,
           autofocus: true,
           autocomplete: "text",
-          class: 'rounded-corners-half width-90 centered-horizontal',
-          rows:"5",
+          class: 'rounded-corners-half width-95 padding-1 opinion-text-area',
           placeholder:"Post a new opinion here..."
           )%>
+        </div>
       </div>
       <%end%>
+    </div>
+    <div class="opinion-listing">
+      
     </div>
   </div>
   <div class="homepage-right-side">rrrrrrrrrrrrrr</div>
