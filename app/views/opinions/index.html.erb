@@ -67,7 +67,7 @@
       <div class="individual-opinion-container margin-y-2">
         <%=image_tag "opinions-icon.svg", class:'width-100 circled-element primary-bg'%>
         <div class="opinion-content margin-x-1">
-          <h3>ToFollowFullName</h3>
+          <h3><%=link_to to_follow.full_name, user_path(to_follow), class: "text-fith-color" %></h3>
           <p>
             <%=link_to to_follow.email, user_path(to_follow), class: "text-fith-color" %>
           </p>
