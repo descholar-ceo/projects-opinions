@@ -120,31 +120,36 @@ header {
     width: 100%;
   }
 }
-.opinion-form-heading{
+
+.opinion-form-heading {
   color: $fith-color;
 }
-.new-opinion-container{
+
+.new-opinion-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.opinion-list-nav{
+.opinion-list-nav {
   border-bottom: 1px solid $third-color;
-  ul{
+
+  ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 6fr;
     cursor: pointer;
-    li{
+
+    li {
       list-style-type: none;
       font-weight: bold;
     }
-    .opinion-li{
+
+    .opinion-li {
       border-bottom: 2px solid $primary-color;
     }
   }
 }
 
-.opinion-text-area{
+.opinion-text-area {
   outline: none;
 }
