@@ -12,4 +12,8 @@ class User < ApplicationRecord
 
   has_many :followers, foreign_key: :followed_id, class_name: :Following
   has_many :my_followers, through: :followers, source: :user
+
+  def who_to_follow
+    User.all.reject { |curr_user| curr_user.include? followeds }
+  end
 end
