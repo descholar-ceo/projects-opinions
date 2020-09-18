@@ -21,4 +21,9 @@ class User < ApplicationRecord
   def do_i_follow_her?(user)
     followeds.include? user
   end
+
+  def unfollow_this_user(user)
+    user_to_unfollow = followings.find(user.id)
+    user_to_unfollow.destroy
+  end
 end

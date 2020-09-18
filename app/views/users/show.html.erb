@@ -65,6 +65,7 @@
     <%= image_tag @user.photo, class: 'circled-element user-img' %>
     <p class="centered-text text-bold text-uppercase"><%=@user.full_name%></p>
     <p class="centered-text text-bold text-fith-color text-uppercase">@<%=@user.username%></p>
+    <%=display_follow_button(@user)%>
   </div>
 
   <div class="rigth-side-stats-container centered-h-v">

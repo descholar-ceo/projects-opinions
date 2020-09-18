@@ -1,49 +1,15 @@
 class FollowingsController < ApplicationController
-  before_action :set_following, only: %i[show edit update destroy]
-
-  # GET /followings
-  # GET /followings.json
-  def index
-    @followings = Following.all
-  end
-
-  # GET /followings/1
-  # GET /followings/1.json
-  def show; end
-
-  # GET /followings/new
-  def new
-    @following = Following.new
-  end
-
-  # GET /followings/1/edit
-  def edit; end
-
   # POST /followings
   # POST /followings.json
   def create
-    @following = Following.new(following_params)
+    @following = current_user.followings.new(followed_id: params[:followed])
 
     respond_to do |format|
       if @following.save
-        format.html { redirect_to @following, notice: 'Following was successfully created.' }
+        format.html { redirect_to user_path(current_user.id) }
         format.json { render :show, status: :created, location: @following }
       else
-        format.html { render :new }
-        format.json { render json: @following.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /followings/1
-  # PATCH/PUT /followings/1.json
-  def update
-    respond_to do |format|
-      if @following.update(following_params)
-        format.html { redirect_to @following, notice: 'Following was successfully updated.' }
-        format.json { render :show, status: :ok, location: @following }
-      else
-        format.html { render :edit }
+        format.html { render :new, alert: 'Failed to follow that user, try again!.' }
         format.json { render json: @following.errors, status: :unprocessable_entity }
       end
     end
@@ -52,22 +18,11 @@ class FollowingsController < ApplicationController
   # DELETE /followings/1
   # DELETE /followings/1.json
   def destroy
-    @following.destroy
-    respond_to do |format|
-      format.html { redirect_to followings_url, notice: 'Following was successfully destroyed.' }
-      format.json { head :no_content }
+    @following = current_user.followeds.find(params[:followed])
+    if current_user.unfollow_this_user(@following)
+      redirect_to user_path(current_user.id)
+    else
+      redirect_to user_path(current_user.id), alert: 'Your unfollowing that user has failed. Please try again!'
     end
-  end
-
-  private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_following
-    @following = Following.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
-  def following_params
-    params.require(:following).permit(:follower_id, :followed_id)
   end
 end
