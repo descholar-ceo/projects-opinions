@@ -29,7 +29,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def set_cover_image_path
-    
     uploaded_pic = get_image_path('cover_image', 'opinions-icon.svg')
     params[:user][:cover_image] = uploaded_pic
   end

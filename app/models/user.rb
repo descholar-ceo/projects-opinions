@@ -15,6 +15,6 @@ class User < ApplicationRecord
 
   def who_to_follow(logged_in_user)
     found_users = User.all.order('created_at DESC').reject { |curr_user| followeds.include? curr_user }
-    found_users.reject{|found| found == logged_in_user }
+    found_users.reject { |found| found == logged_in_user }
   end
 end
