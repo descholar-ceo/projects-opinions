@@ -1,8 +1,11 @@
 <div class="homepage-container">
   <div class="opinion-list">
+    <nav class="cover-image-nav width-100">
+    <%= image_tag @user.cover_image, class: 'cover-image' %>
+    </nav>
     <nav class="opinion-list-nav width-100 margin-b-1 bordered-b-third">
       <ul class="width-95 centered-horizontal margin-b-0">
-        <li class="padding-1 opinion-li text-bold">OPINIONS</li>
+        <li class="padding-1 opinion-li text-bold text-uppercase">Opinions</li>
         <li></li>
         <li></li>
         <li></li>
@@ -22,7 +25,7 @@
       <% end %>
       <div class="width-100">
         <h3 class="width-95 centered-horizontal padding-y-1">
-          <%= f.label :text, "DO YOU HAVE SOME OPINION ON YOUR MIND?", class:"text-fith-color" %>
+          <%= f.label :text, "Do you have some opinion on your mind?", class:"text-fith-color text-uppercase" %>
         </h3>
         <div class="new-opinion-container">
         <%= f.text_area(

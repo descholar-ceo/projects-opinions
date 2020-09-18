@@ -172,3 +172,13 @@ header {
     padding: 0.5rem;
   }
 }
+
+.cover-image-nav{
+  display: grid;
+  place-items: center;
+}
+
+.cover-image{
+  height: 150px;
+  width: 250px;
+}
