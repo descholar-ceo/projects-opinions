@@ -25,7 +25,10 @@
                 <%= leftside_display('following') %>
             </div>
           </div>
-          <div class="aside-body"></div>
+          <div class="aside-body">
+            <div><%= link_to 'Home', root_path %></div>
+            <div><%= link_to 'Profile', user_path(current_user) %></div>
+          </div>
         </aside>
         <div class="main-page">
             <header class="primary-bg">
