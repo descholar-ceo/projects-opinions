@@ -40,14 +40,17 @@ module ApplicationHelper
     is_opinion = current_page?(opinions_path)
     is_user = current_page?(user_path(current_user.id))
     "
-    <div class=\"#{is_root ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
-      #{link_to 'Home', root_path}
+    <div class=\"#{is_root ? 'active' : ''} text-bold text-uppercase width-100 padding-1 centered-text\">
+      <i class=\"fa fa-home white-text\" aria-hidden=\"true\"></i>
+      #{link_to 'Home', root_path, class: 'white-text'}
     </div>
-    <div class=\"#{is_user ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
-      #{link_to 'Profile', user_path(current_user)}
+    <div class=\"#{is_opinion ? 'active' : ''} text-bold text-uppercase width-100 padding-1 centered-text\">
+      <i class=\"fa fa-rss white-text\" aria-hidden=\"true\"></i>
+      #{link_to 'Opinions', opinions_path, class: 'white-text'}
     </div>
-    <div class=\"#{is_opinion ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
-      #{link_to 'Opinions', opinions_path}
+    <div class=\"#{is_user ? 'active' : ''} text-bold text-uppercase width-100 padding-1 centered-text\">
+      <i class=\"fa fa-user white-text\" aria-hidden=\"true\"></i>
+      #{link_to 'Profile', user_path(current_user), class: 'white-text'}
     </div>
     ".html_safe
   end
