@@ -45,7 +45,7 @@
       <div class="margin-y-1 width-100"></div>
       <%@opinions.each do |opinion|%>
         <div class="individual-opinion-container width-100 margin-y-1">
-          <%=image_tag @curr_user_photo, class:"width-100 rounded-corners-half primary-bg"%>
+          <%=image_tag @curr_user_photo, class:"width-100 rounded-corners-half"%>
           <div class="opinion-content margin-x-1">
             <h3>AuthorName</h3>
             <p class="text-fith-color margin-y-1">
@@ -65,7 +65,7 @@
   <div class="width-90 padding-y-1 centered-horizontal">
     <%@who_to_follow.each do |to_follow|%>
       <div class="individual-opinion-container margin-y-2">
-        <%=image_tag "opinions-icon.svg", class:'width-100 circled-element primary-bg'%>
+        <%=image_tag to_follow.photo, class:'width-100 circled-element'%>
         <div class="opinion-content margin-x-1">
           <h3><%=link_to to_follow.full_name, user_path(to_follow), class: "text-fith-color" %></h3>
           <p>

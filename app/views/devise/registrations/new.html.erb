@@ -35,8 +35,13 @@
   </div>
 
   <div>
-    <%= f.label :photo, 'Upload your profile picture' %>
+    <%= f.label :photo, 'Choose a profile picture (optional)' %>
     <%= f.file_field :photo%>
+  </div>
+
+  <div>
+    <%= f.label :cover_image, 'Choose a cover picture (optional)' %>
+    <%= f.file_field :cover_image%>
   </div>
   
   <div class="actions">

@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_action :set_photo_path, only: `%i[create]`
+  before_action :set_photo_path, only: [:create]
+  before_action :set_cover_image_path, only: [:create]
 
   def default_images_path(name)
     Rails.root.join('app/assets/images', name).to_s
@@ -27,14 +28,32 @@ class RegistrationsController < Devise::RegistrationsController
     params[:user][:photo] = uploaded_pic
   end
 
+  def set_cover_image_path
+    
+    uploaded_pic = get_image_path('cover_image', 'opinions-icon.svg')
+    params[:user][:cover_image] = uploaded_pic
+  end
+
   private
 
   def sign_up_params
-    params.require(:user).permit(:username, :full_name, :email, :photo, :password, :password_confirmation)
+    params.require(:user).permit(:username,
+                                 :full_name,
+                                 :email,
+                                 :photo,
+                                 :cover_image,
+                                 :password,
+                                 :password_confirmation)
   end
 
   def account_update_params
-    params.require(:user).permit(:username, :full_name, :email, :photo, :password, :password_confirmation,
+    params.require(:user).permit(:username,
+                                 :full_name,
+                                 :email,
+                                 :photo,
+                                 :cover_image,
+                                 :password,
+                                 :password_confirmation,
                                  :current_password)
   end
 end
