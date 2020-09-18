@@ -36,6 +36,8 @@ module ApplicationHelper
   end
 
   def leftside_pages_navigation
+    return unless user_signed_in?
+
     is_root = current_page?(root_path)
     is_opinion = current_page?(opinions_path)
     is_user = current_page?(user_path(current_user.id))
