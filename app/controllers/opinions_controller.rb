@@ -5,6 +5,7 @@ class OpinionsController < ApplicationController
   # GET /opinions
   # GET /opinions.json
   def index
+    puts
     @opinions = Opinion.all.order('created_at DESC')
     @opinion = Opinion.new
     @who_to_follow = current_user.who_to_follow

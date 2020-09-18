@@ -1,14 +1,30 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_action :upload_photo, only: [:create]
+  before_action :set_photo_path, only: `%i[create, update]`
 
-  def local_image_path(name)
-    Rails.root.join('public/uploads', name).to_s
+  def default_images_path(name)
+    Rails.root.join('app/assets/images', name).to_s
   end
 
-  def upload_photo
-    pic = params[:user]['photo'].tempfile
+  def upload_photo(pic_to_upload, default_pic)
+    pic = if params[:user][pic_to_upload].nil?
+            default_images_path(default_pic)
+          else
+            params[:user][pic_to_upload].tempfile
+          end
     upload = Cloudinary::Uploader.upload pic
-    params[:user][:photo] = upload['url']
+    upload
+  end
+
+  def get_image_path(pic_to_upload, default_pic)
+    m_path = upload_photo(pic_to_upload, default_pic)
+    return if m_path.nil?
+
+    m_path['url']
+  end
+
+  def set_photo_path
+    uploaded_pic = get_image_path('photo', 'default_user_photo.svg')
+    params[:user][:photo] = uploaded_pic
   end
 
   private
