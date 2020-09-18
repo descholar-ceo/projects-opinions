@@ -48,6 +48,11 @@
   margin: 0 auto;
 }
 
+.centered-h-v{
+  display: grid;
+  place-items: center;
+}
+
 .title {
   text-align: center;
   margin-top: 3%;
@@ -91,6 +96,10 @@
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.text-small {
+  font-size: 0.7rem;
 }
 
 .active {

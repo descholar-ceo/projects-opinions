@@ -102,10 +102,10 @@ header {
 
 .homepage-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
 
   .opinion-list {
-    border: 1px solid $fith-color;
+    border-right: 1px solid $fith-color;
     height: 100%;
     width: 100%;
     display: flex;
@@ -173,14 +173,27 @@ header {
   }
 }
 
-.cover-image-nav{
+.cover-image-nav,
+.right-side-user-head{
   display: grid;
   place-items: center;
   height: 150px;
-  background-color: $third-color;
 }
 
 .cover-image{
   height: 100%;
   width: 250px;
+}
+.user-img{
+  height: 50px;
+  width: 50px;
+}
+
+.rigth-side-stats-container{
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid $third-color;
+  border-top: 1px solid $third-color;
+  div{
+    border-right: 1px solid $third-color;
+  }
 }
