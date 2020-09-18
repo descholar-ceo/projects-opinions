@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_action :set_photo_path, only: `%i[create, update]`
+  before_action :set_photo_path, only: `%i[create]`
 
   def default_images_path(name)
     Rails.root.join('app/assets/images', name).to_s
