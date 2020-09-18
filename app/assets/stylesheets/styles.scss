@@ -127,6 +127,7 @@ header {
 
 .opinion-list-nav {
   height: 52px;
+
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 6fr;
@@ -147,14 +148,15 @@ header {
   grid-template-columns: 1fr 8fr;
 }
 
-.aside-nav-1{
+.aside-nav-1 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   width: 100%;
   height: 80px;
   padding: 0.5rem;
   place-items: center;
-  img{
+
+  img {
     height: 100%;
     width: 100%;
   }
@@ -164,7 +166,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 52px;
-  div{
+
+  div {
     border: 1px solid $black-color;
     padding: 0.5rem;
   }
