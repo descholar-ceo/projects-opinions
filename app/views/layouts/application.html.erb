@@ -15,19 +15,18 @@
         <aside>
           <div class="aside-header">
             <div class="aside-nav-1">
-              <%= leftside_display('photo') %>
+              <%= leftside_header_display('photo') %>
               <p class="text-fith-color text-bold text-uppercase centered-text">
-                <%= leftside_display('full_name') %>
+                <%= leftside_header_display('full_name') %>
               </p>
             </div>
             <div class="aside-nav-2">
-                <%= leftside_display('followers') %>
-                <%= leftside_display('following') %>
+                <%= leftside_header_display('followers') %>
+                <%= leftside_header_display('following') %>
             </div>
           </div>
           <div class="aside-body">
-            <div><%= link_to 'Home', root_path %></div>
-            <div><%= link_to 'Profile', user_path(current_user) %></div>
+            <%= leftside_pages_navigation %>
           </div>
         </aside>
         <div class="main-page">

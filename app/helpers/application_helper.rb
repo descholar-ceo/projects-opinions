@@ -10,7 +10,7 @@ module ApplicationHelper
     display.html_safe
   end
 
-  def leftside_display(passed_param)
+  def leftside_header_display(passed_param)
     case passed_param
     when 'photo' then user_signed_in? ? (image_tag current_user.photo, class: 'rounded-corners-half white-bg') : ''
     when 'full_name' then user_signed_in? ? current_user.full_name : ''
@@ -33,5 +33,22 @@ module ApplicationHelper
         ".html_safe
       end
     end
+  end
+
+  def leftside_pages_navigation
+    is_root_page = current_page?(root_path)
+    is_opinion_page = current_page?(opinions_path)
+    is_user_page = current_page?(user_path(current_user.id))
+    "
+    <div class=\"#{is_root_page ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
+      #{link_to 'Home', root_path}
+    </div>
+    <div class=\"#{is_user_page ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
+      #{link_to 'Profile', user_path(current_user)}
+    </div>
+    <div class=\"#{is_opinion_page ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
+      #{link_to 'Opinions', opinions_path}
+    </div>
+    ".html_safe
   end
 end
