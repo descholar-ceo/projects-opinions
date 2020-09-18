@@ -36,17 +36,17 @@ module ApplicationHelper
   end
 
   def leftside_pages_navigation
-    is_root_page = current_page?(root_path)
-    is_opinion_page = current_page?(opinions_path)
-    is_user_page = current_page?(user_path(current_user.id))
+    is_root = current_page?(root_path)
+    is_opinion = current_page?(opinions_path)
+    is_user = current_page?(user_path(current_user.id))
     "
-    <div class=\"#{is_root_page ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
+    <div class=\"#{is_root ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
       #{link_to 'Home', root_path}
     </div>
-    <div class=\"#{is_user_page ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
+    <div class=\"#{is_user ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
       #{link_to 'Profile', user_path(current_user)}
     </div>
-    <div class=\"#{is_opinion_page ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
+    <div class=\"#{is_opinion ? 'active' : ''} white-text text-bold text-uppercase width-100 padding-1 centered-text\">
       #{link_to 'Opinions', opinions_path}
     </div>
     ".html_safe
