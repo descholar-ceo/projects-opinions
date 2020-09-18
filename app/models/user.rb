@@ -17,4 +17,13 @@ class User < ApplicationRecord
     found_users = User.all.order('created_at DESC').reject { |curr_user| followeds.include? curr_user }
     found_users.reject { |found| found == logged_in_user }
   end
+
+  def my_follower?(user)
+    my_followers.include? user
+  end
+
+  def do_i_follow_her?(user)
+    followeds.include? user
+  end
+
 end

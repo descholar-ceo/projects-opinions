@@ -176,9 +176,11 @@ header {
 .cover-image-nav{
   display: grid;
   place-items: center;
+  height: 150px;
+  background-color: $third-color;
 }
 
 .cover-image{
-  height: 150px;
+  height: 100%;
   width: 250px;
 }
