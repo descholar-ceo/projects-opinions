@@ -45,7 +45,7 @@
       <div class="margin-y-1 width-100"></div>
       <%@opinions.each do |opinion|%>
         <div class="individual-opinion-container width-100 margin-y-1">
-          <%=image_tag "opinions-icon.svg", class:'width-100 rounded-corners-half primary-bg'%>
+          <img src="<%=@curr_user_photo%>", class="width-100 rounded-corners-half primary-bg"/>
           <div class="opinion-content margin-x-1">
             <h3>AuthorName</h3>
             <p class="text-fith-color margin-y-1">

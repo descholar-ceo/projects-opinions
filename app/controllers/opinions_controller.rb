@@ -8,6 +8,7 @@ class OpinionsController < ApplicationController
     @opinions = Opinion.all.order('created_at DESC')
     @opinion = Opinion.new
     @who_to_follow = current_user.who_to_follow
+    @curr_user_photo = current_user.photo
   end
 
   # GET /opinions/1

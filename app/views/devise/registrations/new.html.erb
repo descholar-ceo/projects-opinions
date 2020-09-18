@@ -3,7 +3,7 @@
 <%= form_for(
   resource, as: resource_name, 
   url: registration_path(resource_name),
-  html: {class: 'auth-form rounded-corners-full width-60'}) do |f| %>
+  html: {class: 'auth-form rounded-corners-full width-60', multipart: true}) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -32,6 +32,12 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'rounded-corners-half width-90' %>
+  </div>
+
+  <div>
+    <%= f.label :photo, 'Upload your profile picture' %>
+    <%= f.hidden_field :photo_cache %>
+    <%= f.file_field :photo%>
   </div>
   
   <div class="actions">
