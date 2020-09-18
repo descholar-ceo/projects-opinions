@@ -13,9 +13,8 @@ class User < ApplicationRecord
   has_many :followers, foreign_key: :followed_id, class_name: :Following
   has_many :my_followers, through: :followers, source: :user
 
-  # mount_uploader :photo, PhotoUploader
-
-  def who_to_follow
-    User.all.order('created_at DESC').reject { |curr_user| followeds.include? curr_user }
+  def who_to_follow(logged_in_user)
+    found_users = User.all.order('created_at DESC').reject { |curr_user| followeds.include? curr_user }
+    found_users.reject{|found| found == logged_in_user }
   end
 end
