@@ -49,7 +49,7 @@
         <div class="individual-opinion-container width-100 margin-y-1">
           <%=image_tag opinion.user.photo, class:"width-100 rounded-corners-half"%>
           <div class="opinion-content margin-x-1">
-            <h3><%=opinion.user.full_name%></h3>
+            <h3><%=link_to opinion.user.full_name, user_path(opinion.user), class: 'text-black-color' %></h3>
             <p class="text-fith-color margin-y-1">
               <%=opinion.text%>
             </p>
