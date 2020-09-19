@@ -149,9 +149,10 @@ header {
   display: grid;
   grid-template-columns: 1fr 8fr;
 }
-.comment-form-container{
-  form{
-    input{
+
+.comment-form-container {
+  form {
+    input {
       padding: 0.4rem;
       outline: none;
     }
