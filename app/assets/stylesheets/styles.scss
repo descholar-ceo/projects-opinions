@@ -199,10 +199,12 @@ header {
     border-right: 1px solid $third-color;
   }
 }
-.individual-rightside-container{
+
+.individual-rightside-container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  img{
+
+  img {
     height: 50px;
     width: 50px;
   }
