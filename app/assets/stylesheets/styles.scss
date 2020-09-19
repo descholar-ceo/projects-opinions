@@ -20,6 +20,9 @@ a {
   h1 {
     color: $white-color;
   }
+  &:hover {
+    color: $third-color;
+  }
 }
 
 body {
@@ -132,10 +135,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 6fr;
     cursor: pointer;
-
-    .opinion-li {
-      border-bottom: 2px solid $primary-color;
-    }
   }
 }
 
@@ -195,7 +194,7 @@ header {
   border-bottom: 1px solid $third-color;
   border-top: 1px solid $third-color;
 
-  div {
+  div:not(:last-child) {
     border-right: 1px solid $third-color;
   }
 }
@@ -208,4 +207,7 @@ header {
     height: 50px;
     width: 50px;
   }
+}
+.pic-and-follow{
+  grid-template-columns: 1fr 2fr;
 }

@@ -5,9 +5,11 @@
     </nav>
     <nav class="opinion-list-nav width-100 margin-b-1 bordered-b-third">
       <ul class="width-95 centered-horizontal margin-b-0">
-        <li class="padding-1 opinion-li text-bold text-uppercase">Opinions</li>
-        <li></li>
-        <li></li>
+        <li class="padding-1 border-b-primary">
+          <%=link_to 'Opinions', opinions_path, class: 'text-uppercase text-black-color text-bold'%>
+        </li>
+        <li class="padding-1 text-bold text-uppercase">Following</li>
+        <li class="padding-1 text-bold text-uppercase">Followers</li>
         <li></li>
       </ul>
     </nav>
@@ -50,7 +52,7 @@
         <div class="individual-opinion-container width-100 margin-y-1">
           <%=image_tag opinion.user.photo, class:"width-100 rounded-corners-half"%>
           <div class="opinion-content margin-x-1">
-            <h3><%=opinion.user.full_name%></h3>
+            <h3><%=link_to opinion.user.full_name, user_path(opinion.user), class: 'text-black-color' %></h3>
             <p class="text-fith-color margin-y-1">
               <%=opinion.text%>
             </p>
@@ -62,10 +64,14 @@
 <div class="homepage-right-side">
   <div class="right-side-user-head">
   <div class="centered-h-v">
-    <%= image_tag @user.photo, class: 'circled-element user-img' %>
+    <div class="centered-h-v pic-and-follow">
+      <div class="width-100">
+       <%=display_follow_button(@user)%>
+      </div>
+      <%= image_tag @user.photo, class: 'circled-element user-img' %>
+    </div>
     <p class="centered-text text-bold text-uppercase"><%=@user.full_name%></p>
     <p class="centered-text text-bold text-fith-color">@<%=@user.username%></p>
-    <%=display_follow_button(@user)%>
   </div>
 
   <div class="rigth-side-stats-container centered-h-v">

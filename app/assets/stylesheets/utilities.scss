@@ -78,6 +78,9 @@
 }
 
 // text
+.text-black-color {
+  color: $black-color;
+}
 .text-fith-color {
   color: $fith-color;
 }
@@ -108,4 +111,8 @@
 
 .active {
   background-color: $primary-color;
+}
+
+.border-b-primary {
+  border-bottom: 2px solid $primary-color;
 }
