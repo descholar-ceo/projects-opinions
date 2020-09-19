@@ -58,9 +58,9 @@
           <div class='post-comments-section'>
           <p class="text-small">(<%= opinion.comments.count %> comments)</p>
             <% opinion.comments.each do |comment| %>
-              <div>
+              <div class="individual-comment">
                 <p>
-                  <b><%= comment.user.full_name %>:</b> <%= comment.body %>
+                  <%= link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'%>: <%= comment.body %>
                 </p>
                 <span> <%= comment.created_at.strftime("%Y/%m/%d") %> </span>
               </div>
