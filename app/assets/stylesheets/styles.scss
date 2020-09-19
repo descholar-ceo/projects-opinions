@@ -20,6 +20,7 @@ a {
   h1 {
     color: $white-color;
   }
+
   &:hover {
     color: $third-color;
   }
@@ -208,6 +209,7 @@ header {
     width: 50px;
   }
 }
-.pic-and-follow{
+
+.pic-and-follow {
   grid-template-columns: 1fr 2fr;
 }
