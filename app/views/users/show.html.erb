@@ -64,7 +64,7 @@
   <div class="centered-h-v">
     <%= image_tag @user.photo, class: 'circled-element user-img' %>
     <p class="centered-text text-bold text-uppercase"><%=@user.full_name%></p>
-    <p class="centered-text text-bold text-fith-color text-uppercase">@<%=@user.username%></p>
+    <p class="centered-text text-bold text-fith-color">@<%=@user.username%></p>
     <%=display_follow_button(@user)%>
   </div>
 
@@ -94,8 +94,8 @@
         <%=image_tag follower.photo, class:'width-100 circled-element'%>
         <div class="opinion-content margin-x-1">
           <h3><%=link_to follower.full_name, user_path(follower), class: "text-fith-color" %></h3>
-          <p>
-            <%=link_to follower.email, user_path(follower), class: "text-fith-color" %>
+          <p  class="text-fith-color text-small" >
+            @<%= link_to follower.username, user_path(follower), class: 'text-fith-color ' %>
           </p>
         </div>
       </div>

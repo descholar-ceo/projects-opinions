@@ -64,14 +64,20 @@
   </nav>
   <div class="width-90 padding-y-1 centered-horizontal">
     <%@who_to_follow.each do |to_follow|%>
-      <div class="individual-opinion-container margin-y-2">
-        <%=image_tag to_follow.photo, class:'width-100 circled-element'%>
+      <div class="individual-rightside-container margin-y-2">
+
+        <%=image_tag to_follow.photo, class:'circled-element'%>
+
         <div class="opinion-content margin-x-1">
           <h3><%=link_to to_follow.full_name, user_path(to_follow), class: "text-fith-color" %></h3>
-          <p>
-            <%=link_to to_follow.email, user_path(to_follow), class: "text-fith-color" %>
+          <p class="width-100">
+            <%#=link_to to_follow.email, user_path(to_follow), class: "text-fith-color text-small" %>
+            <%= display_followed_by(to_follow) %>
           </p>
         </div>
+
+        <%=display_follow_button(to_follow)%>
+
       </div>
     <%end%>
   </div>
