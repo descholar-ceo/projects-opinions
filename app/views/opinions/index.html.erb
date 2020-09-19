@@ -73,7 +73,6 @@
         <div class="opinion-content margin-x-1">
           <h3><%=link_to to_follow.full_name, user_path(to_follow), class: "text-fith-color" %></h3>
           <p class="width-100">
-            <%#=link_to to_follow.email, user_path(to_follow), class: "text-fith-color text-small" %>
             <%= display_followed_by(to_follow) %>
           </p>
         </div>
