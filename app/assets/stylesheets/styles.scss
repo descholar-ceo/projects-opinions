@@ -143,9 +143,19 @@ header {
   outline: none;
 }
 
-.individual-opinion-container {
+.individual-opinion-container,
+.individual-comment,
+.comment-form-container {
   display: grid;
   grid-template-columns: 1fr 8fr;
+}
+.comment-form-container{
+  form{
+    input{
+      padding: 0.4rem;
+      outline: none;
+    }
+  }
 }
 
 .aside-nav-1 {

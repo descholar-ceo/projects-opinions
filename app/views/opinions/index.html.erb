@@ -55,21 +55,25 @@
             </p>
           </div>
         </div>
-          <div class='post-comments-section'>
-          <p class="text-small">(<%= opinion.comments.count %> comments)</p>
+          <div>
+          <p class="text-small text-rightside text-third-color"><%= opinion.comments.count %> comments</p>
             <% opinion.comments.each do |comment| %>
               <div class="individual-comment">
-                <p>
-                  <%= link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'%>: <%= comment.body %>
+                <div></div>
+                <p class="bordered-t-third">
+                  <%= link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'%>:
+                  <%= comment.body %>
                 </p>
-                <span> <%= comment.created_at.strftime("%Y/%m/%d") %> </span>
               </div>
             <% end %>
-
-            <%= form_for(opinion.comments.new, url: comments_path(opinion_id: opinion)) do |form| %>
-              <%= form.text_field :body,  placeholder: 'Comment on this opinion...' %>
-              <%= form.submit 'Comment', class: 'button-secondary' %>
-            <% end %>
+            <div class="comment-form-container">
+              <div></div>
+              <%= form_for(opinion.comments.new, url: comments_path(opinion_id: opinion),
+              class: 'comment-form bordered-t-third') do |form| %>
+                <%= form.text_field :body,  class: 'width-70', placeholder: 'Comment on this opinion...' %>
+                <%= form.submit 'Comment', class: 'button-secondary width-20' %>
+              <% end %>
+            </div>
           </div>
       <%end%>
     </div>
