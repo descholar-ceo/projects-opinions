@@ -1,11 +1,9 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[show edit update destroy]
 
-  # POST /comments
-  # POST /comments.json
   def create
-    @comment = current_user.comments.new(body: params[:comment][:body], opinion_id: params[:opinion_id])
-    puts "Created comment instance is #{@comment} and params are #{params}"
+    @comment = current_user.comments.new( comment_params )
+    @comment.opinion_id=params[:opinion_id]
     if @comment.save
       redirect_to opinions_path
     else
@@ -14,6 +12,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:opinion_id, :body)
+    params.require(:comment).permit(:body)
   end
 end
