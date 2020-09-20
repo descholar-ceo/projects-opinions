@@ -2,5 +2,5 @@ language: ruby
 rvm:
   - 2.7.1
 script:
-  - bundle install - jobs=3 - retry=3
+  - bundle install
   - bundle exec rspec
