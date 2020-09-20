@@ -5,5 +5,5 @@ rvm:
   - jruby-19mode
   - rbx-2
 script:
-  - bundle install
+  - bundle install - jobs=3 - retry=3
   - bundle exec rspec
