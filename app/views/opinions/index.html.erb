@@ -70,7 +70,7 @@
               <div></div>
               <%= form_for(opinion.comments.new, url: comments_path(opinion_id: opinion),
               class: 'comment-form bordered-t-third') do |form| %>
-                <%= form.text_field :body,  class: 'width-70', placeholder: 'Comment on this opinion...' %>
+                <%= form.text_field :body,  class: 'width-70 rounded-corners-half', placeholder: 'Comment on this opinion...' %>
                 <%= form.submit 'Comment', class: 'button-secondary width-20' %>
               <% end %>
             </div>
