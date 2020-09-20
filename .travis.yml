@@ -12,6 +12,8 @@ install:
 before_script:
   - bundle exec rake db:create
   - bundle exec rake db:migrate
+  - rm -rf bin/webpack*
+  - bundle exec rails webpacker:compile
 
 script:
   - bundle exec rspec
