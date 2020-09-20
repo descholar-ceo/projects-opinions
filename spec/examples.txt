@@ -1,8 +1,8 @@
 example_id                        | status | run_time        |
 --------------------------------- | ------ | --------------- |
-./spec/models/user_spec.rb[1:1:1] | passed | 0.00353 seconds |
-./spec/models/user_spec.rb[1:1:2] | passed | 0.04895 seconds |
-./spec/models/user_spec.rb[1:1:3] | passed | 0.00296 seconds |
-./spec/models/user_spec.rb[1:1:4] | passed | 0.00305 seconds |
-./spec/models/user_spec.rb[1:1:5] | passed | 0.00179 seconds |
-./spec/models/user_spec.rb[1:1:6] | passed | 0.00166 seconds |
+./spec/models/user_spec.rb[1:1:1] | passed | 0.00302 seconds |
+./spec/models/user_spec.rb[1:1:2] | passed | 0.00499 seconds |
+./spec/models/user_spec.rb[1:1:3] | passed | 0.00173 seconds |
+./spec/models/user_spec.rb[1:1:4] | passed | 0.00146 seconds |
+./spec/models/user_spec.rb[1:1:5] | passed | 0.00128 seconds |
+./spec/models/user_spec.rb[1:1:6] | passed | 0.03741 seconds |
