@@ -52,8 +52,10 @@ RSpec.describe User, type: :model do
     end
 
     it 'checks who to follow' do
-      user1.followings.create(followed: user2.id)
-      expect(user1.who_to_follow(user1).include?(user2)).to be true
+      user1.followings.create(followed: user2)
+      who_to_follows = user1.who_to_follow(user1)
+      #   puts "The gotten whotofollow is #{user1.followeds}"
+      expect(who_to_follows.include?(user3)).to be true
     end
   end
 end
