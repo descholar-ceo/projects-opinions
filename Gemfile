@@ -50,10 +50,11 @@ end
 
 group :test do
   gem 'capybara', '~> 3.33'
+  gem 'coveralls', '~> 0.8.23'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
-  gem 'simplecov', '~> 0.19.0'
+  gem 'simplecov', '~> 0.16.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
