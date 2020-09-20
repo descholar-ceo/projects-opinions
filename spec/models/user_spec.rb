@@ -12,35 +12,48 @@ RSpec.describe User, type: :model do
   describe 'validations' do
     it { should validate_presence_of(:username) }
     it { should validate_uniqueness_of(:username) }
-    it { should validate_length_of(:username).is_at_least(3).is_at_most(15) }
+    it {
+      should validate_length_of(:username)
+        .is_at_least(3)
+        .is_at_most(15)
+        .with_message('Username should be between 3 to 15 characters')
+    }
 
     it { should validate_presence_of(:full_name) }
-    it { should validate_length_of(:full_name).is_at_least(3).is_at_most(50) }
+    it {
+      should validate_length_of(:full_name)
+        .is_at_least(3)
+        .is_at_most(50)
+        .with_message('Full name should be present, and between 3 to 50 characters')
+    }
 
     it { should validate_presence_of(:email) }
     it { should validate_uniqueness_of(:email) }
     it { should validate_length_of(:email).is_at_least(3).is_at_most(50) }
 
     it { should validate_presence_of(:password) }
-    it { should validate_length_of(:password).is_at_least(6).is_at_most(20)}
+    it { should validate_length_of(:password).is_at_least(6).is_at_most(20) }
   end
-  #   describe 'testing helpers' do
-  #     let(:user) { User.create(email: 'usertesthelpers@test.tst', password: 'password', name: 'userpasswordtotest') }
-  #     let(:friend) do
-  #       User.create(email: 'friendtesthelpers@test.tst',
-  #                   password: 'password',
-  #                   name: 'friendpasswordtotest')
-  #     end
-  #     it 'confirms the friend request' do
-  #       user.friendships.new(friend_id: friend.id, status: false).save
-  #       friend.confirm_request(user)
-  #       expect(friend.a_friend?(user)).to be(true)
-  #     end
+  describe 'testing helpers' do
+    let(:user1) do
+      User.create(email: 'user1@test.tst', username: 'username1',
+                  password: 'password', full_name: 'user1password')
+    end
+    let(:user2) do
+      User.create(email: 'user2@test.tst', username: 'username2',
+                  password: 'password', full_name: 'user2password')
+    end
+    let(:user3) do
+      User.create(email: 'user3@test.tst', username: 'username3',
+                  password: 'password', full_name: 'user3password')
+    end
+    it 'checks if I follow her' do
+      expect(user2.do_i_follow_her?(user1)).to be(false)
+    end
 
-  #     it 'rejecting friendhip request' do
-  #       user.friendships.new(friend_id: friend.id, status: false).save
-  #       friend.reject_request(user)
-  #       expect(friend.inverse_friendships.include?(user)).to be false
-  #     end
-  #   end
+    it 'checks who to follow' do
+      user1.followings.create(followed: user2.id)
+      expect(user1.who_to_follow(user1).include?(user2)).to be true
+    end
+  end
 end

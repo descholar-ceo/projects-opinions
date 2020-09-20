@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates :username, presence: true, length: { in: 3..15,
+                                                 wrong_length: 'Username should be between 3 to 15 characters' }
+
   has_many :opinions, foreign_key: :author_id
   has_many :comments
 
