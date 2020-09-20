@@ -28,21 +28,26 @@ RSpec.describe User, type: :model do
                   password: 'password', full_name: 'user1password')
       User.create(email: 'user2@test.tst', username: 'username2',
                   password: 'password', full_name: 'user2password')
-      User.create(email: 'user3@test.tst', username: 'username3',
-                  password: 'password', full_name: 'user3password')
     end
 
     it 'checks if I follow her' do
       user1 = User.first
-      user3 = User.last
-      expect(user1.do_i_follow_her?(user3)).to be(false)
+      user2 = User.last
+      expect(user1.do_i_follow_her?(user2)).to be(false)
     end
 
     it 'checks who to follow' do
       user1 = User.first
-      user3 = User.last
+      user2 = User.last
       who_to_follows = user1.who_to_follow(user1)
-      expect(who_to_follows.include?(user3)).to be true
+      expect(who_to_follows.include?(user2)).to be true
+    end
+
+    it 'unfollow a followed user' do
+      user1 = User.first
+      user2 = User.last
+      user1.followings.create(followed: user2)
+      expect(user1.unfollow_this_user(user2)).to_not be nil
     end
   end
 end
