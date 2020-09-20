@@ -1,8 +1,20 @@
-example_id                        | status | run_time        |
---------------------------------- | ------ | --------------- |
-./spec/models/user_spec.rb[1:1:1] | passed | 0.00302 seconds |
-./spec/models/user_spec.rb[1:1:2] | passed | 0.00499 seconds |
-./spec/models/user_spec.rb[1:1:3] | passed | 0.00173 seconds |
-./spec/models/user_spec.rb[1:1:4] | passed | 0.00146 seconds |
-./spec/models/user_spec.rb[1:1:5] | passed | 0.00128 seconds |
-./spec/models/user_spec.rb[1:1:6] | passed | 0.03741 seconds |
+example_id                         | status | run_time        |
+---------------------------------- | ------ | --------------- |
+./spec/models/user_spec.rb[1:1:1]  | passed | 0.00486 seconds |
+./spec/models/user_spec.rb[1:1:2]  | passed | 0.01155 seconds |
+./spec/models/user_spec.rb[1:1:3]  | passed | 0.00341 seconds |
+./spec/models/user_spec.rb[1:1:4]  | passed | 0.00232 seconds |
+./spec/models/user_spec.rb[1:1:5]  | passed | 0.00342 seconds |
+./spec/models/user_spec.rb[1:1:6]  | passed | 0.00612 seconds |
+./spec/models/user_spec.rb[1:2:1]  | failed | 0.00875 seconds |
+./spec/models/user_spec.rb[1:2:2]  | failed | 0.0129 seconds  |
+./spec/models/user_spec.rb[1:2:3]  | failed | 0.0065 seconds  |
+./spec/models/user_spec.rb[1:2:4]  | failed | 0.00805 seconds |
+./spec/models/user_spec.rb[1:2:5]  | failed | 0.01301 seconds |
+./spec/models/user_spec.rb[1:2:6]  | failed | 0.00799 seconds |
+./spec/models/user_spec.rb[1:2:7]  | passed | 0.01306 seconds |
+./spec/models/user_spec.rb[1:2:8]  | failed | 0.07309 seconds |
+./spec/models/user_spec.rb[1:2:9]  | failed | 0.00761 seconds |
+./spec/models/user_spec.rb[1:2:10] | passed | 0.00821 seconds |
+./spec/models/user_spec.rb[1:2:11] | failed | 0.00655 seconds |
+./spec/models/user_spec.rb[1:2:12] | failed | 0.07296 seconds |

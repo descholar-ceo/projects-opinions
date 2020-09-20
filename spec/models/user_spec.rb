@@ -9,20 +9,21 @@ RSpec.describe User, type: :model do
     it { should have_many(:followers).with_foreign_key(:followed_id).class_name(:Following) }
     it { should have_many(:my_followers).through(:followers).source(:user) }
   end
-  #   describe 'validation' do
-  #     it 'when name is empty, saving in the db fails' do
-  #       user = User.new(email: 'usertest@test.tst', password: 'password').save
-  #       expect(user).to be(false)
-  #     end
-  #     it 'when name has length greater than 20, saving in the db fails' do
-  #       user = User.new(email: 'usertest@test.tst', password: 'password', name: 'userpasswordtotestistooloong').save
-  #       expect(user).to be(false)
-  #     end
-  #     it 'when name has length less than 20, saving in the db succeed' do
-  #       user = User.new(email: 'usertest@test.tst', password: 'password', name: 'userpasswordtotest').save
-  #       expect(user).to be(true)
-  #     end
-  #   end
+  describe 'validations' do
+    it { should validate_presence_of(:username) }
+    it { should validate_uniqueness_of(:username) }
+    it { should validate_length_of(:username).is_at_least(3).is_at_most(15) }
+
+    it { should validate_presence_of(:full_name) }
+    it { should validate_length_of(:full_name).is_at_least(3).is_at_most(50)}
+
+    it { should validate_presence_of(:email) }
+    it { should validate_uniqueness_of(:email) }
+    it { should validate_length_of(:email).is_at_least(3).is_at_most(50)}
+
+    it { should validate_presence_of(:password) }
+    it { should validate_length_of(:password).is_at_least(6).is_at_most(20)}
+  end
   #   describe 'testing helpers' do
   #     let(:user) { User.create(email: 'usertesthelpers@test.tst', password: 'password', name: 'userpasswordtotest') }
   #     let(:friend) do
