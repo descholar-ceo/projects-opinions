@@ -7,8 +7,11 @@ class User < ApplicationRecord
   validates :username,
             presence: true,
             uniqueness: true,
-            length: { in: 3..15,
-                      wrong_length: 'Username should be between 3 to 15 characters' }
+            length: { in: 3..15 }
+
+  validates :email, presence: true, uniqueness: true, length: { in: 3..50 }, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/
+  validates :password, presence: true, length: { in: 6..20 }
+  validates :full_name, presence: true, length: { in: 3..50 }
 
   has_many :opinions, foreign_key: :author_id
   has_many :comments
