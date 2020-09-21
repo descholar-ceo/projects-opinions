@@ -4,6 +4,8 @@
 ## Project description
 The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application which is available for anyone who has a project opinions to share, and other users registered on it will be able to comment on that opinion. I have listed all the features available on this app.
 
+This project was done for learning purpose, the aim was to create a customized content but same design of [Twitter redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) by [Gregoire Vella](https://www.behance.net/gregoirevella) in order to master Rails. This project is my capstone from [Microverse](https://www.microverse.org/), project specifications are [here](https://www.notion.so/Twitter-redesign-f8a8d48453d54d1a949bb0ceab4c8718)
+
 ## Screenshot (s)
 > Screenshots: // If your project has some UI, you will link the screenshot of the UI here
 
@@ -34,34 +36,51 @@ The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an applicat
 - [Heroku](https://heroku.com/) for deployment
 
 ## Running and testing it locally
-> Elaborate how this project could be tested and run on one's local computer
 
 ### Prerequisites
-> What should I have already to run this project locally?
+- [Ruby 2.7.1](https://www.ruby-lang.org/en/news/2020/03/31/ruby-2-7-1-released/)
+- [Node v12.18.4 or higher](https://nodejs.org/en/)
+- [Yarn v1.22.4 or higher](https://yarnpkg.com/)
+- [Git 2.17.0 or higer](https://yarnpkg.com/)
 
 ### Setup
-> How should setup this project on my local computer?
+- Run `git clone https://github.com/descholar-ceo/projects-opinions; cd projects-opinions; bundle install; yarn` to get a ready copy on your local computer
 
 ### Usage
-> How to use it? //Which command should I run or how to start this project?
+- Run `bin/rails server` to start the server, normally after the server started, you should be able to access the projects-opinion app on `http://localhost:3000` or `http://127.0.0.1:3000` or `http://0.0.0.0:3000` in your browser
 
 ### Tests
-> How to run tests locally?
+To run tests locally, run this command `bundle exec rspec`
 
 ## Contributions
-> How should I contribute? //Specify steps to follow inorder to contribute to this project, if it is allowed.
 
-## Acknowledgement (s)
-> If you have used some resources from someone, or instution, or if you got motivations from somewhere, you should show them the acknowlodgement
+There are two ways of contributing to this project:
 
-## Author (s)
-> Write your name here and list any other one who helped you during this project
+1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/descholar-ceo/projects-opinions/issues ), if that problem you met is not in already opened issues then open the issue by clicking on `new issue` button.
 
-	* [GitHub username](github-link)
+2.  If you have a solution to that, and you are willing to work on it, follow the below steps to contribute:
+    1.  Fork this repository
+    1.  Clone it on your local computer by running `git clone https://github.com/your-username/projects-opinions.git` __Replace *your username* with the username you use on github__
+    1.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
+    1.  Create a separate branch off the *develop branch*,
+    1.  Write your codes which fix the issue you found
+    1.  Commit and push the branch you created
+    1.  Raise a pull request, comparing your new created branch with our original develop branch [here](https://github.com/descholar-ceo/projects-opinions)
 
-	* [LinkedIn username](linkedin-profile-link)
+## Author
 
-	* [Twitter username](twitter-profile-link)
+👤 **Mugirase Emmanuel**
+
+- Github: [@descholar-ceo](https://github.com/descholar-ceo)
+- Twitter: [@descholar3](https://twitter.com/descholar3)
+- Linkedin: [MUGIRASE Emmanuel](https://www.linkedin.com/in/mugirase-emmanuel)
 
 
-===> You can find this readme file template [on this link](https://github.com/nezago/nezago-guidelines/wiki/Readme-file-template)
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgment
+* [Microverse](https://www.microvese.org)
+
+* [Gregoire Vella](https://www.behance.net/gregoirevella) for the design idea
