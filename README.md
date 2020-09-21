@@ -1,9 +1,6 @@
 # Projects Opinions
 [![Build Status](https://travis-ci.org/descholar-ceo/projects-opinions.svg?branch=add-projects-opinions-logic)](https://travis-ci.org/descholar-ceo/projects-opinions)  ![Linters](https://github.com/descholar-ceo/projects-opinions/workflows/Linters/badge.svg)  [![Coverage Status](https://coveralls.io/repos/github/descholar-ceo/projects-opinions/badge.svg?branch=add-projects-opinions-logic)](https://coveralls.io/github/descholar-ceo/projects-opinions?branch=add-projects-opinions-logic)
 
-## Project vision
-> Vision : // You will give a general vision of the project, what problem you are solving in this project
-
 ## Project description
 > Description : //You describe the general logic of the project here
 
@@ -11,7 +8,11 @@
 > Screenshots: // If your project has some UI, you will link the screenshot of the UI here
 
 ## Built with
-> Built with : // You will specify the technologies you used to build this project such as languages, frameworks, or libararies, ...
+- Ruby on rails 6
+- RSpec
+- SASS
+- ERB
+- Git
 
 ## Features
 > Features : // List of features, what a user will be able to do with this project. Eg: a user can signup
