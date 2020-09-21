@@ -21,4 +21,11 @@ RSpec.describe 'A user can be able to post an opinion', type: :feature do
     expect(current_path).to eq(opinions_path)
     expect(page).to have_content('This is a post one')
   end
+
+  it 'refuses to post a new opinion if the opinion is empty' do
+    visit opinions_path
+    click_button 'Send opinion'
+    expect(current_path).to eq(opinions_path)
+    expect(page).to have_content('Sorry! The opinion you submitted failed to be saved please try again!')
+  end
 end

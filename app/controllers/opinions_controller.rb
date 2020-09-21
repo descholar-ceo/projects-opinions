@@ -27,14 +27,10 @@ class OpinionsController < ApplicationController
   def create
     @opinion = current_user.opinions.build(opinion_params)
 
-    respond_to do |format|
-      if @opinion.save
-        format.html { redirect_to opinions_path, notice: 'Opinion was successfully created.' }
-        format.json { render :show, status: :created, location: @opinion }
-      else
-        format.html { render :new }
-        format.json { render json: @opinion.errors, status: :unprocessable_entity }
-      end
+    if @opinion.save
+      redirect_to opinions_path, notice: 'Opinion was successfully created.'
+    else
+      redirect_to opinions_path, alert: 'Sorry! The opinion you submitted failed to be saved please try again!'
     end
   end
 
