@@ -2,32 +2,36 @@
 [![Build Status](https://travis-ci.org/descholar-ceo/projects-opinions.svg?branch=add-projects-opinions-logic)](https://travis-ci.org/descholar-ceo/projects-opinions)  ![Linters](https://github.com/descholar-ceo/projects-opinions/workflows/Linters/badge.svg)  [![Coverage Status](https://coveralls.io/repos/github/descholar-ceo/projects-opinions/badge.svg?branch=add-projects-opinions-logic)](https://coveralls.io/github/descholar-ceo/projects-opinions?branch=add-projects-opinions-logic)
 
 ## Project description
-> Description : //You describe the general logic of the project here
+The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application which is available for anyone who has a project opinions to share, and other users registered on it will be able to comment on that opinion. I have listed all the features available on this app.
 
 ## Screenshot (s)
 > Screenshots: // If your project has some UI, you will link the screenshot of the UI here
 
 ## Built with
-- Ruby on rails 6
-- RSpec
-- SASS
-- ERB
-- Git
+- [Ruby on rails 6.0.3.3](https://rubygems.org/gems/rails/versions/6.0.3.3)
 
 ## Features
-> Features : // List of features, what a user will be able to do with this project. Eg: a user can signup
+- User can sign up
+- User can sign in
+- User can follow other users
+- User can unfollow other users
+- User can see their followers
+- User can post opinions
+- User can comment on any opinions
+- User can upload their profile picture and cover picture while signin up
+- User can see other people's profile
 
-## Deployments
-	* Live demo link //The link of deplyoment of your project
-	* Documentation link //Link to documentation of this project
-
-## API Endpoints Specifications
-> If this project is a backend project which exposes some APIs. List all APIs here
-	* Root API
-	* List of all APIs
+## Deployment
+[Projects Opinions](https://projects-opinions.herokuapp.com/)
 
 ## Tools
-> Tools : //List of all tools you used building this projects. Example: Code editor, CI/CD tools, Testing tools, deplyoment tools, ...
+- [Git](https://git-scm.com/) for version control
+- [RSpec](https://rspec.info/) for testing
+- [Capybara](http://teamcapybara.github.io/capybara/) for integration tests
+- [Travis CI](https://travis-ci.org/) for continuous integration
+- [Simplecov](https://github.com/simplecov-ruby/simplecov) and [Coveralls](https://coveralls.io/) for counting and reporting code coverage
+- [Stylelint](https://stylelint.io/) and [Rubocop](https://rubocop.org/) for code linting and formatting
+- [Heroku](https://heroku.com/) for deployment
 
 ## Running and testing it locally
 > Elaborate how this project could be tested and run on one's local computer
