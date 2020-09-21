@@ -22,7 +22,7 @@ a {
   }
 
   &:hover {
-    color: $secondary-color;
+    color: $fith-color;
   }
 }
 
@@ -94,9 +94,14 @@ header {
 }
 
 .alert {
-  color: $third-color;
+  color: $danger-color;
   text-align: center;
   width: 100%;
+}
+
+.notification-place {
+  height: 20px;
+  background-color: $fourth-color;
 }
 
 .main-content {
@@ -178,7 +183,7 @@ header {
 .aside-nav-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 52px;
+  height: 72px;
 
   div {
     border: 1px solid $black-color;
@@ -205,11 +210,11 @@ header {
 
 .rigth-side-stats-container {
   grid-template-columns: 1fr 1fr 1fr;
-  border-bottom: 1px solid $third-color;
-  border-top: 1px solid $third-color;
+  border-bottom: 1px solid $fith-color;
+  border-top: 1px solid $fith-color;
 
   div:not(:last-child) {
-    border-right: 1px solid $third-color;
+    border-right: 1px solid $fith-color;
   }
 }
 

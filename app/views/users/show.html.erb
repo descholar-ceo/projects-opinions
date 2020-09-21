@@ -45,8 +45,7 @@
       <%end%>
     </div>
     <div class="white-bg width-95 margin-y-1 padding-y-1 padding-x-2 rounded-corners-half">
-      <h2 class="text-primary-color bordered-b-third width-95 padding-y-1 centered-horizontal">
-      <%=@user.opinions.size%> OPINIONS IN TOTAL</h2>
+      <h2 class="text-primary-color bordered-b-third width-95 padding-y-1 centered-horizontal text-uppercase">All opinions </h2>
       <div class="margin-y-1 width-100"></div>
       <%@user.opinions.each do |opinion|%>
         <div class="individual-opinion-container width-100 margin-y-1">
@@ -74,7 +73,7 @@
     <p class="centered-text text-bold text-fith-color">@<%=@user.username%></p>
   </div>
 
-  <div class="rigth-side-stats-container centered-h-v">
+  <div class="rigth-side-stats-container centered-h-v width-100">
     <div class="centered-h-v padding-1">
       <p class="centered-text text-uppercase text-bold"><%=@user.opinions.size%></p>
       <p class="centered-text text-uppercase text-fith-color text-bold text-small">Opinions</p>
