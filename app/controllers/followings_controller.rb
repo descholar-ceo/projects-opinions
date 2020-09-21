@@ -5,16 +5,16 @@ class FollowingsController < ApplicationController
     if @following.save
       redirect_to root_path
     else
-      render :new, alert: 'Failed to follow that user, try again!'
+      render root_path, alert: 'Failed to follow that user, try again!'
     end
   end
 
   def destroy
     @following = current_user.followeds.find(params[:followed])
     if current_user.unfollow_this_user(@following)
-      redirect_to user_path(current_user.id)
+      redirect_to root_path
     else
-      redirect_to user_path(current_user.id), alert: 'Your unfollowing that user has failed. Please try again!'
+      redirect_to root_path, alert: 'Your unfollowing that user has failed. Please try again!'
     end
   end
 end
