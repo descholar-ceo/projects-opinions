@@ -8,6 +8,7 @@ default: &default
   cache_path: tmp/cache/webpacker
   check_yarn_integrity: false
   webpack_compile_output: true
+  compile: true
 
   # Additional paths webpack should lookup modules
   # ['app/assets', 'engine/foo/app/assets']
@@ -75,7 +76,6 @@ development:
     watch_options:
       ignored: '**/node_modules/**'
 
-
 test:
   <<: *default
   compile: true
@@ -87,10 +87,13 @@ production:
   <<: *default
 
   # Production depends on precompilation of packs prior to booting for performance.
-  compile: false
+  compile: true
 
   # Extract and emit a css file
   extract_css: true
 
   # Cache manifest.json for performance
   cache_manifest: true
+
+build: 
+    <<: *default
