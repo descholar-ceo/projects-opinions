@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :comments
+  resources :comments, only: [:create]
   resources :followings
   resources :opinions
   devise_for :users, :controllers => { registrations: :registrations }
