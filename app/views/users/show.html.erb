@@ -57,8 +57,29 @@
             </p>
           </div>
         </div>
+        <div>
+          <p class="text-small text-rightside text-third-color"><%= opinion.comments.size %> comments</p>
+          <% opinion.comments.each do |comment| %>
+            <div class="individual-comment">
+              <div></div>
+              <p class="bordered-t-third">
+                <%= link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'%>:
+                <%= comment.body %>
+              </p>
+            </div>
+          <% end %>
+            <div class="comment-form-container">
+              <div></div>
+              <%= form_for(opinion.comments.new, url: comments_path(opinion_id: opinion),
+              class: 'comment-form bordered-t-third') do |form| %>
+                <%= form.text_field :body,  class: 'width-70 rounded-corners-half', placeholder: 'Comment on this opinion...' %>
+                <%= form.submit 'Comment', class: 'button-secondary width-20' %>
+              <% end %>
+            </div>
+          </div>
       <%end%>
     </div>
+
   </div>
 <div class="homepage-right-side">
   <div class="right-side-user-head">

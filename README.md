@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/descholar-ceo/projects-opinions.svg?branch=add-projects-opinions-logic)](https://travis-ci.org/descholar-ceo/projects-opinions)  ![Linters](https://github.com/descholar-ceo/projects-opinions/workflows/Linters/badge.svg)  [![Coverage Status](https://coveralls.io/repos/github/descholar-ceo/projects-opinions/badge.svg?branch=add-projects-opinions-logic)](https://coveralls.io/github/descholar-ceo/projects-opinions?branch=add-projects-opinions-logic)
 
 ## Project description
-The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application which is available for anyone who has a project opinions to share, and other users registered on it will be able to comment on that opinion. I have listed all the features available on this app.
+The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application which is available for anyone who has a project opinion to share, and other registered users will be able to comment on that opinion. I have listed all the features available on this app.
 
 This project was done for learning purpose, the aim was to create a customized content but same design of [Twitter redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) by [Gregoire Vella](https://www.behance.net/gregoirevella) in order to master Rails. This project is my capstone from [Microverse](https://www.microverse.org/), project specifications are [here](https://www.notion.so/Twitter-redesign-f8a8d48453d54d1a949bb0ceab4c8718)
 
@@ -19,12 +19,12 @@ This project was done for learning purpose, the aim was to create a customized c
 - User can unfollow other users
 - User can see their followers
 - User can post opinions
-- User can comment on any opinions
-- User can upload their profile picture and cover picture while signin up
+- User can comment on any opinion
+- User can upload their profile picture and cover picture while signing up
 - User can see other people's profile
 
 ## Deployment
-[Projects Opinions](https://projects-opinions.herokuapp.com/)
+[Projects Opinions on heroku](https://projects-opinions.herokuapp.com/)
 
 ## Tools
 - [Git](https://git-scm.com/) for version control

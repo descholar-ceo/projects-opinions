@@ -3,9 +3,9 @@ module UsersHelper
     return if current_user.id == user.id
 
     if current_user.do_i_follow_her?(user)
-      link_to('Unfollow', following_path(followed: user), method: :delete, class: 'button-secondary')
+      link_to('Unfollow', following_path(followed: user), method: :delete, class: 'button-secondary centered-h-v')
     else
-      link_to('Follow', followings_path(followed: user), method: :post, class: 'button-primary')
+      link_to('Follow', followings_path(followed: user), method: :post, class: 'button-primary centered-h-v')
     end
   end
 end

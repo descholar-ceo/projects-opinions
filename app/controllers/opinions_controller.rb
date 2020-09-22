@@ -3,7 +3,7 @@ class OpinionsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @opinions = Opinion.all.order('created_at DESC')
+    @opinions = Opinion.includes(:comments).all.order('created_at DESC')
     @opinion = Opinion.new
     @who_to_follow = current_user.who_to_follow(current_user)
   end

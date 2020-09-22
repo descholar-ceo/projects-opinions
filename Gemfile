@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'paperclip', '~> 6.1'
 # gem 'carrierwave', '~> 2.1'
 gem 'cloudinary', '~> 1.17', '>= 1.17.1'
+gem 'erb_lint', '~> 0.0.35'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
