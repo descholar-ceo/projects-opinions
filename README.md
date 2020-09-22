@@ -2,17 +2,22 @@
 [![Build Status](https://travis-ci.org/descholar-ceo/projects-opinions.svg?branch=add-projects-opinions-logic)](https://travis-ci.org/descholar-ceo/projects-opinions)  ![Linters](https://github.com/descholar-ceo/projects-opinions/workflows/Linters/badge.svg)  [![Coverage Status](https://coveralls.io/repos/github/descholar-ceo/projects-opinions/badge.svg?branch=add-projects-opinions-logic)](https://coveralls.io/github/descholar-ceo/projects-opinions?branch=add-projects-opinions-logic)
 
 ## Project description
-The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application which is available for anyone who has a project opinion to share, and other registered users will be able to comment on that opinion. I have listed all the features available on this app.
+The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application which is available for anyone who has a project opinion to share, and other registered users will be able to comment on that opinion. I have listed all the [features](#Features) available on this app.
 
-This project was done for learning purpose, the aim was to create a customized content but same design of [Twitter redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) by [Gregoire Vella](https://www.behance.net/gregoirevella) in order to master Rails. This project is my capstone from [Microverse](https://www.microverse.org/), project specifications are [here](https://www.notion.so/Twitter-redesign-f8a8d48453d54d1a949bb0ceab4c8718)
+This project was done for learning purpose, the aim was to create a customized content but same design of [Twitter redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) by [Gregoire Vella](https://www.behance.net/gregoirevella) in order to master Rails. This project is my capstone from [Microverse](https://www.microverse.org/), project specifications are listed [here](https://www.notion.so/Twitter-redesign-f8a8d48453d54d1a949bb0ceab4c8718)
 
 ## Screenshots
 | Homepage && Opnions page | Profile page && User page |
 | --- | --- |
 | ![](./docs/projects-opinions-homepage.png) | ![](./docs/projects-opinions-userpage.png) |
 
+## Project presentation
+- [Click here](https://www.loom.com/share/79c2f2c45cc043b4abe2afac3183e7fa) to see me presenting this project.
+
 ## Built with
 - [Ruby on rails 6.0.3.3](https://rubygems.org/gems/rails/versions/6.0.3.3)
+- [SASS](https://sass-lang.com/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## Features
 - User can sign up
@@ -44,9 +49,13 @@ This project was done for learning purpose, the aim was to create a customized c
 - [Node v12.18.4 or higher](https://nodejs.org/en/)
 - [Yarn v1.22.4 or higher](https://yarnpkg.com/)
 - [Git 2.17.0 or higer](https://yarnpkg.com/)
+- [Postgresql 9.5.23 or higer](https://www.postgresql.org/)
 
 ### Setup
-- Run `git clone https://github.com/descholar-ceo/projects-opinions; cd projects-opinions; bundle install; yarn` to get a ready copy on your local computer
+- Run `git clone https://github.com/descholar-ceo/projects-opinions && cd projects-opinions` to get a copy of source codes on your local computer and to navigate inside the project directory
+- Run `bundle install && yarn` to install gems and dependencies
+- Run `bundle exec rake db:create` to create databases that are being used with this project
+- Run `bundle exec rake db:migrate` to migrate (create) all of the tables needed by this project
 
 ### Usage
 - Run `bin/rails server` to start the server, normally after the server started, you should be able to access the projects-opinion app on `http://localhost:3000` or `http://127.0.0.1:3000` or `http://0.0.0.0:3000` in your browser
@@ -58,7 +67,7 @@ To run tests locally, run this command `bundle exec rspec`
 
 There are two ways of contributing to this project:
 
-1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/descholar-ceo/projects-opinions/issues ), if that problem you met is not in already opened issues then open the issue by clicking on `new issue` button.
+1.  If you see something wrong or not working, please check [the issue tracker section](https://github.com/descholar-ceo/projects-opinions/issues ), if that problem you met is not in already opened issues then open a new issue by clicking on `new issue` button.
 
 2.  If you have a solution to that, and you are willing to work on it, follow the below steps to contribute:
     1.  Fork this repository
