@@ -6,8 +6,10 @@ The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an applicat
 
 This project was done for learning purpose, the aim was to create a customized content but same design of [Twitter redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) by [Gregoire Vella](https://www.behance.net/gregoirevella) in order to master Rails. This project is my capstone from [Microverse](https://www.microverse.org/), project specifications are [here](https://www.notion.so/Twitter-redesign-f8a8d48453d54d1a949bb0ceab4c8718)
 
-## Screenshot (s)
-> Screenshots: // If your project has some UI, you will link the screenshot of the UI here
+## Screenshots
+| Homepage && Opnions page | Profile page && User page |
+| --- | --- |
+| ![](./docs/projects-opinions-homepage.png) | ![](./docs/projects-opinions-userpage.png) |
 
 ## Built with
 - [Ruby on rails 6.0.3.3](https://rubygems.org/gems/rails/versions/6.0.3.3)
