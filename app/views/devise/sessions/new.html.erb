@@ -16,12 +16,7 @@
     <%= f.password_field :password, autocomplete: "current-password", class: 'rounded-corners-half width-100' %>
   </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="remember-me centered-horizontal width-40">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
+  <%= display_remember_me(f) %>
 
   <div class="actions width-90 centered-horizontal">
     <%= f.submit "Log in", class: 'button-secondary width-100' %>

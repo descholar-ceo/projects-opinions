@@ -8,4 +8,15 @@ module UsersHelper
       link_to('Follow', followings_path(followed: user), method: :post, class: 'button-primary centered-h-v')
     end
   end
+
+  def display_remember_me(f)
+    if devise_mapping.rememberable?
+      "<div class=\"remember-me centered-horizontal width-40\">
+      #{f.check_box :remember_me}
+      #{f.label :remember_me}
+      </div>".html_safe
+    else
+      ''
+    end
+  end
 end
