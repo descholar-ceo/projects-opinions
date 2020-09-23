@@ -1,0 +1,12 @@
+<ul>
+<%@users.each do |user|%>
+<li>
+<span>
+Email: <%=user.email%>
+</span>
+<span>
+<%=link_to "See profile", user_path(user)%>
+</span>
+</li>
+<%end%>
+</ul>
