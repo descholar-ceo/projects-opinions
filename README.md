@@ -73,10 +73,10 @@ There are two ways of contributing to this project:
     1.  Fork this repository
     1.  Clone it on your local computer by running `git clone https://github.com/your-username/projects-opinions.git` __Replace *your username* with the username you use on github__
     1.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
-    1.  Create a separate branch off the *develop branch*,
+    1.  Create a separate branch off the *master branch*,
     1.  Write your codes which fix the issue you found
     1.  Commit and push the branch you created
-    1.  Raise a pull request, comparing your new created branch with our original develop branch [here](https://github.com/descholar-ceo/projects-opinions)
+    1.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/descholar-ceo/projects-opinions)
 
 ## Author
 

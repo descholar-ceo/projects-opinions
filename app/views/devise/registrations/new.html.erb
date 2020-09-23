@@ -6,45 +6,45 @@
   html: {class: 'auth-form rounded-corners-full width-60', multipart: true}) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="field width-90 centered-horizontal">
     <%= f.label :full_name %><br />
-    <%= f.text_field :full_name, autofocus: true, autocomplete: "full_name", class: 'rounded-corners-half width-90' %>
+    <%= f.text_field :full_name, autofocus: true, autocomplete: "full_name", class: 'rounded-corners-half width-100' %>
   </div>
 
-  <div class="field">
+  <div class="field width-90 centered-horizontal">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'rounded-corners-half width-90' %>
+    <%= f.text_field :username, autofocus: true, autocomplete: "username", class: 'rounded-corners-half width-100' %>
   </div>
 
-  <div class="field">
+  <div class="field width-90 centered-horizontal">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'rounded-corners-half width-90' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'rounded-corners-half width-100' %>
   </div>
 
-  <div class="field">
+  <div class="field width-90 centered-horizontal">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", class: 'rounded-corners-half width-90' %>
+    <%= f.password_field :password, autocomplete: "new-password", class: 'rounded-corners-half width-100' %>
   </div>
 
-  <div class="field">
+  <div class="field width-90 centered-horizontal">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'rounded-corners-half width-90' %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'rounded-corners-half width-100' %>
   </div>
 
-  <div>
+  <div class="width-90 centered-horizontal">
     <%= f.label :photo, 'Choose a profile picture (optional)' %>
     <%= f.file_field :photo%>
   </div>
 
-  <div>
+  <div class="width-90 centered-horizontal">
     <%= f.label :cover_image, 'Choose a cover picture (optional)' %>
     <%= f.file_field :cover_image%>
   </div>
   
-  <div class="actions">
-    <%= f.submit "Sign up", class: 'button-secondary width-90' %>
+  <div class="actions width-90 centered-horizontal">
+    <%= f.submit "Sign up", class: 'button-secondary width-100' %>
   </div>
 <% end %>
