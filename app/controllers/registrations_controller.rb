@@ -7,12 +7,19 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def upload_photo(pic_to_upload, default_pic)
+    auth = {
+      cloud_name: Rails.application.credentials[Rails.env.to_sym][:cloud_name],
+      api_key: Rails.application.credentials[Rails.env.to_sym][:api_key],
+      api_secret: Rails.application.credentials[Rails.env.to_sym][:api_secret],
+      enhance_image_tag: Rails.application.credentials[Rails.env.to_sym][:enhance_image_tag],
+      static_file_support: Rails.application.credentials[Rails.env.to_sym][:static_file_support]
+    }
     pic = if params[:user][pic_to_upload].nil?
             default_images_path(default_pic)
           else
             params[:user][pic_to_upload].tempfile
           end
-    upload = Cloudinary::Uploader.upload pic
+    upload = Cloudinary::Uploader.upload(pic, auth)
     upload
   end
 
