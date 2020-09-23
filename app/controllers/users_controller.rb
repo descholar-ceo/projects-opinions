@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  def index
+    @users = User.all
+  end
+
   def show
     @user = User.includes(:followings, :followeds, :opinions, :comments, :followers, :my_followers).find(params[:id])
     @opinion = Opinion.new
