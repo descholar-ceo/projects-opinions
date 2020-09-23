@@ -12,16 +12,6 @@
     </nav>
     <div class="opinion-form white-bg width-95 padding-y-1 rounded-corners-half">
       <%=form_for(@opinion) do |f| %>
-      <% if @opinion.errors.any? %>
-        <div class="error-explanation">
-          <h2><%= pluralize(opinion.errors.count, "error") %> prohibited this opinion from being saved:</h2>
-          <ul>
-            <% @opinion.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
       <div class="width-100">
         <h3 class="width-95 centered-horizontal padding-y-1">
           <%= f.label :text, "Do you have some opinion on your mind?", class:"text-fith-color" %>
