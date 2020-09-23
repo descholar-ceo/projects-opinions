@@ -50,6 +50,7 @@ This project was done for learning purpose, the aim was to create a customized c
 - [Yarn v1.22.4 or higher](https://yarnpkg.com/)
 - [Git 2.17.0 or higer](https://yarnpkg.com/)
 - [Postgresql 9.5.23 or higer](https://www.postgresql.org/)
+- Your computer's clock should be properly set
 
 ### Setup
 - Run `git clone https://github.com/descholar-ceo/projects-opinions && cd projects-opinions` to get a copy of source codes on your local computer and to navigate inside the project directory
@@ -61,7 +62,7 @@ This project was done for learning purpose, the aim was to create a customized c
 - Run `bin/rails server` to start the server, normally after the server started, you should be able to access the projects-opinion app on `http://localhost:3000` or `http://127.0.0.1:3000` or `http://0.0.0.0:3000` in your browser
 
 ### Tests
-To run tests locally, run this command `bundle exec rspec`
+To run tests locally, run this command `bundle exec rspec` use this masterkey to run tests locally `7199dfd980f347f649f3d356fd5cd3b2`
 
 ## Contributions
 
