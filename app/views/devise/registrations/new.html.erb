@@ -23,9 +23,8 @@
 
   <div class="field width-90 centered-horizontal">
     <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <%=display_minimum_of_characters%>
+    <br/>
     <%= f.password_field :password, autocomplete: "new-password", class: 'rounded-corners-half width-100' %>
   </div>
 

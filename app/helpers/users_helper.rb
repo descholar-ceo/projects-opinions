@@ -19,4 +19,12 @@ module UsersHelper
       ''
     end
   end
+
+  def display_minimum_of_characters
+    if @minimum_password_length
+      "<em>(#{@minimum_password_length} characters minimum)</em>".html_safe
+    else
+      ''
+    end
+  end
 end
