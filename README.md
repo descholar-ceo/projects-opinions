@@ -40,6 +40,7 @@ This project was done for learning purpose, the aim was to create a customized c
 - [Travis CI](https://travis-ci.org/) for continuous integration
 - [Simplecov](https://github.com/simplecov-ruby/simplecov) and [Coveralls](https://coveralls.io/) for counting and reporting code coverage
 - [Stylelint](https://stylelint.io/) and [Rubocop](https://rubocop.org/) for code linting and formatting
+- [Cloudinary](https://cloudinary.com/) for saving pictures
 - [Heroku](https://heroku.com/) for deployment
 
 ## Running and testing it locally
@@ -62,7 +63,10 @@ This project was done for learning purpose, the aim was to create a customized c
 - Run `bin/rails server` to start the server, normally after the server started, you should be able to access the projects-opinion app on `http://localhost:3000` or `http://127.0.0.1:3000` or `http://0.0.0.0:3000` in your browser
 
 ### Tests
-To run tests locally, run this command `bundle exec rspec` use this masterkey to run tests locally `7199dfd980f347f649f3d356fd5cd3b2`
+- Create a file in `config/` folder and call it `master.key`
+- Copy and Paste this key `7199dfd980f347f649f3d356fd5cd3b2` in that file `master.key`
+- Make sure that your computer clock is on the right time
+- Run this command `bundle exec rspec` to run tests
 
 ## Contributions
 
