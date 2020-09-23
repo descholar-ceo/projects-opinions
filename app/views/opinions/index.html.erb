@@ -33,7 +33,7 @@
     </div>
     <div class="white-bg width-95 margin-y-1 padding-y-1 padding-x-2 rounded-corners-half">
       <h2 class="text-uppercase text-primary-color bordered-b-third width-95 padding-y-1 centered-horizontal">
-      <%=@opinions.size%> Opinions in total</h2>
+      <%=@opinions.count%> Opinions in total</h2>
       <div class="margin-y-1 width-100"></div>
       <%@opinions.each do |opinion|%>
         <div class="individual-opinion-container width-100 margin-y-1">
@@ -46,8 +46,8 @@
           </div>
         </div>
         <div>
-          <p class="text-small text-rightside text-third-color"><%= opinion.comments.size %> comments</p>
-          <% opinion.comments.each do |comment| %>
+          <p class="text-small text-rightside text-third-color"><%= opinion.comments.count %> comments</p>
+          <% opinion.comments.includes(:user).each do |comment| %>
             <div class="individual-comment">
               <div></div>
               <p class="bordered-t-third">
