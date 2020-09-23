@@ -6,14 +6,14 @@
   url: session_path(resource_name),
   html: {class: 'auth-form rounded-corners-full width-60'}) do |f| %>
 
-  <div class="field">
+  <div class="field width-90 centered-horizontal">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'rounded-corners-half width-90' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'rounded-corners-half width-100' %>
   </div>
 
-  <div class="field">
+  <div class="field width-90 centered-horizontal">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password", class: 'rounded-corners-half width-90' %>
+    <%= f.password_field :password, autocomplete: "current-password", class: 'rounded-corners-half width-100' %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -23,7 +23,7 @@
     </div>
   <% end %>
 
-  <div class="actions width-100">
-    <%= f.submit "Log in", class: 'button-secondary width-90' %>
+  <div class="actions width-90 centered-horizontal">
+    <%= f.submit "Log in", class: 'button-secondary width-100' %>
   </div>
 <% end %>
