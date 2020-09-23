@@ -1,0 +1,25 @@
+# ---
+# development:
+#   cloud_name: descholar
+#   api_key: '386295415951288'
+#   api_secret: wMBLi4TxEqffjHvYR-jyaCcWXqM
+#   enhance_image_tag: true
+#   static_file_support: false
+# production:
+#   cloud_name: descholar
+#   api_key: '386295415951288'
+#   api_secret: wMBLi4TxEqffjHvYR-jyaCcWXqM
+#   enhance_image_tag: true
+#   static_file_support: true
+# test:
+#   cloud_name: descholar
+#   api_key: '386295415951288'
+#   api_secret: wMBLi4TxEqffjHvYR-jyaCcWXqM
+#   enhance_image_tag: true
+#   static_file_support: false
+test:
+  cloud_name: descholar
+  api_key: '386295415951288'
+  api_secret: wMBLi4TxEqffjHvYR-jyaCcWXqM
+  enhance_image_tag: true
+  static_file_support: false
