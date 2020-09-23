@@ -74,14 +74,12 @@
 <div class="homepage-right-side">
   <div class="right-side-user-head">
   <div class="centered-h-v">
-    <div class="centered-h-v pic-and-follow">
-      <div class="width-100">
-       <%=display_follow_button(@user)%>
-      </div>
+    <div class="centered-h-v">
       <%= image_tag @user.photo, class: 'circled-element user-img' %>
     </div>
     <p class="centered-text text-bold text-uppercase"><%=@user.full_name%></p>
     <p class="centered-text text-bold text-fith-color">@<%=@user.username%></p>
+    <%=display_follow_button(@user)%>
   </div>
 
   <div class="rigth-side-stats-container centered-h-v width-100">

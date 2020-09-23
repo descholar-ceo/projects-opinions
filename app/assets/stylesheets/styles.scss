@@ -191,7 +191,7 @@ header {
 .right-side-user-head {
   display: grid;
   place-items: center;
-  height: 150px;
+  height: 185px;
 }
 
 .cover-image {
@@ -224,6 +224,6 @@ header {
   }
 }
 
-.pic-and-follow {
-  grid-template-columns: 1fr 2fr;
+.follow-button {
+  height: 32px;
 }
