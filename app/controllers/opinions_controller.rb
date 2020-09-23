@@ -1,6 +1,5 @@
 class OpinionsController < ApplicationController
-  before_action :set_opinion, only: %i[show edit update destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: %i[index create]
 
   def index
     @opinions = Opinion.includes(:comments).all.order(created_at: :desc)
