@@ -17,7 +17,7 @@ module ApplicationHelper
     when 'followers'
       if user_signed_in?
         "
-        <div>
+        <div class=\"centered-h-v\">
           <p class=\"centered-text text-fith-color text-bold\">#{current_user.my_followers.size}</p>
           <p class=\"centered-text text-fith-color text-bold\">Followers</p>
         </div>
@@ -26,7 +26,7 @@ module ApplicationHelper
     when 'following'
       if user_signed_in?
         "
-        <div>
+        <div class=\"centered-h-v\">
           <p class=\"centered-text text-fith-color text-bold\">#{current_user.followeds.size}</p>
           <p class=\"centered-text text-fith-color text-bold\">Following</p>
         </div>
@@ -47,7 +47,8 @@ module ApplicationHelper
       <i class=\"fa fa-home white-text\" aria-hidden=\"true\"></i>
       #{link_to 'Home', root_path, class: 'white-text'}
     </div>
-    <div class=\"#{is_user ? 'active' : ''} text-bold text-uppercase width-100 padding-1 centered-text\">
+    <div class=\"#{is_user ? 'active' : ''}
+     text-bold text-uppercase width-100 padding-1 centered-text\">
       <i class=\"fa fa-user white-text\" aria-hidden=\"true\"></i>
       #{link_to 'Profile', user_path(current_user), class: 'white-text'}
     </div>
