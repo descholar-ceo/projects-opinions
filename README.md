@@ -1,5 +1,5 @@
 # Projects Opinions
-[![Build Status](https://travis-ci.org/descholar-ceo/projects-opinions.svg?branch=add-projects-opinions-logic)](https://travis-ci.org/descholar-ceo/projects-opinions)  ![Linters](https://github.com/descholar-ceo/projects-opinions/workflows/Linters/badge.svg)
+[![Build Status](https://travis-ci.org/descholar-ceo/projects-opinions.svg?branch=add-projects-opinions-logic)](https://travis-ci.org/descholar-ceo/projects-opinions)  ![Linters](https://github.com/descholar-ceo/projects-opinions/workflows/Linters/badge.svg)  [![Coverage Status](https://coveralls.io/repos/github/descholar-ceo/projects-opinions/badge.svg?branch=add-projects-opinions-logic)](https://coveralls.io/github/descholar-ceo/projects-opinions?branch=add-projects-opinions-logic)
 
 ## Project description
 The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application which is available for anyone who has a project opinion to share, and other registered users will be able to comment on that opinion. I have listed all the [features](#Features) available on this app.
@@ -38,6 +38,7 @@ This project was done for learning purpose, the aim was to create a customized c
 - [RSpec](https://rspec.info/) for testing
 - [Capybara](http://teamcapybara.github.io/capybara/) for integration tests
 - [Travis CI](https://travis-ci.org/) for continuous integration
+- [Simplecov](https://github.com/simplecov-ruby/simplecov) and [Coveralls](https://coveralls.io/) for counting and reporting code coverage
 - [Stylelint](https://stylelint.io/) and [Rubocop](https://rubocop.org/) for code linting and formatting
 - [Cloudinary](https://cloudinary.com/) for saving pictures
 - [Heroku](https://heroku.com/) for deployment
@@ -57,14 +58,14 @@ This project was done for learning purpose, the aim was to create a customized c
 - Run `bundle install && yarn` to install gems and dependencies
 - Run `bundle exec rake db:create` to create databases that are being used with this project
 - Run `bundle exec rake db:migrate` to migrate (create) all of the tables needed by this project
-- Create a file in `config/` folder and call it `master.key`
-- Copy and Paste this key `7199dfd980f347f649f3d356fd5cd3b2` in that file `master.key`
-- Make sure that your computer clock is on the right time
 
 ### Usage
 - Run `bin/rails server` to start the server, normally after the server started, you should be able to access the projects-opinion app on `http://localhost:3000` or `http://127.0.0.1:3000` or `http://0.0.0.0:3000` in your browser
 
 ### Tests
+- Create a file in `config/` folder and call it `master.key`
+- You will need a master key to paste in that file
+- Make sure that your computer clock is on the right time
 - Run this command `bundle exec rspec` to run tests
 
 ## Contributions
