@@ -13,6 +13,23 @@ module UsersHelper
     end
   end
 
+  def display_who_to_follow_list(who_to_follow)
+    res = ''
+    who_to_follow.each do |to_follow|
+      res << "
+      <div class=\"individual-rightside-container margin-y-2\">
+        #{image_tag to_follow.photo, class:'circled-element'}
+
+        <div class=\"opinion-content margin-x-1\">
+          <h3>#{link_to to_follow.full_name, user_path(to_follow), class: "text-fith-color"}</h3>
+          <p class=\"width-100\">#{display_followed_by(to_follow)}</p>
+        </div>
+        #{display_follow_button(to_follow)}
+      </div>"
+    end
+    res.html_safe
+  end
+
   def display_remember_me(form)
     if devise_mapping.rememberable?
       "<div class=\"remember-me centered-horizontal width-40\">
