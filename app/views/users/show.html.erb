@@ -1,0 +1,79 @@
+<div class="homepage-container">
+  <div class="opinion-list">
+    <nav class="cover-image-nav width-100">
+    <%= image_tag @user.cover_image, class: 'cover-image' %>
+    </nav>
+    <nav class="opinion-list-nav width-100 margin-b-1 bordered-b-third">
+      <ul class="width-95 centered-horizontal margin-b-0">
+        <li class="padding-1 border-b-primary">
+          <%=link_to 'Opinions', opinions_path, class: 'text-uppercase text-black-color text-bold'%>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+    <div class="opinion-form white-bg width-95 padding-y-1 rounded-corners-half">
+      <%=form_for(@opinion) do |f| %>
+      <div class="width-100">
+        <h3 class="width-95 centered-horizontal padding-y-1">
+          <%= f.label :text, "Do you have some opinion on your mind?", class:"text-fith-color text-uppercase" %>
+        </h3>
+        <div class="new-opinion-container">
+        <%= f.text_area(
+          :text,
+          autofocus: true,
+          autocomplete: "text",
+          class: 'rounded-corners-half width-95 padding-1 opinion-text-area',
+          placeholder:"Post a new opinion here..."
+          )%>
+        </div>
+        <div class="width-95 centered-horizontal">
+          <%= f.submit 'Send opinion', class: 'button-primary width-20' %>
+        </div>
+      </div>
+      <%end%>
+    </div>
+    <div class="white-bg width-95 margin-y-1 padding-y-1 padding-x-2 rounded-corners-half">
+      <h2 class="text-primary-color bordered-b-third width-95 padding-y-1 centered-horizontal text-uppercase">All opinions </h2>
+      <div class="margin-y-1 width-100"></div>
+      <%=display_opinions_list(@user)%>
+    </div>
+
+  </div>
+<div class="homepage-right-side">
+  <div class="right-side-user-head">
+  <div class="centered-h-v">
+    <div class="centered-h-v">
+      <%= image_tag @user.photo, class: 'circled-element user-img' %>
+    </div>
+    <p class="centered-text text-bold text-uppercase"><%=@user.full_name%></p>
+    <p class="centered-text text-bold text-fith-color">@<%=@user.username%></p>
+    <%=display_follow_button(@user)%>
+  </div>
+
+  <div class="rigth-side-stats-container centered-h-v width-100">
+    <div class="centered-h-v padding-1">
+      <p class="centered-text text-uppercase text-bold"><%=@user.opinions.count%></p>
+      <p class="centered-text text-uppercase text-fith-color text-bold text-small">Opinions</p>
+    </div>
+    <div class="centered-h-v padding-1">
+      <p class="centered-text text-uppercase text-bold"><%=@user.followeds.count%></p>
+      <p class="centered-text text-uppercase text-fith-color text-bold text-small">Following</p>
+    </div>
+    <div class="centered-h-v padding-1">
+      <p class="text-uppercase text-bold"><%=@user.my_followers.count%></p>
+      <p class="text-uppercase text-fith-color text-bold text-small">Followers</p>
+    </div>
+  </div>
+  </div>
+  <nav class="width-100 margin-b-1">
+    <ul class="width-90 bordered-b-third centered-horizontal margin-b-0">
+      <li class="padding-1 opinion-li text-bold centered-text text-fith-color text-uppercase">Followed by</li>
+    </ul>
+  </nav>
+  <div class="width-90 padding-y-1 centered-horizontal">
+    <%=display_followers_list(@user)%>
+  </div>
+</div>
+</div>

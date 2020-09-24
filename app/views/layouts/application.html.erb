@@ -4,12 +4,56 @@
     <title>ProjectsOpinions</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+      <main>
+        <aside>
+          <div class="aside-header">
+            <div class="aside-nav-1">
+              <%= leftside_header_display('photo') %>
+              <p class="text-fith-color text-bold text-uppercase centered-text">
+                <%= leftside_header_display('full_name') %>
+              </p>
+            </div>
+            <div class="aside-nav-2">
+                <%= leftside_header_display('followers') %>
+                <%= leftside_header_display('following') %>
+            </div>
+          </div>
+          <div class="aside-body">
+            <%= leftside_pages_navigation %>
+          </div>
+        </aside>
+        <div class="main-page">
+            <header class="primary-bg">
+              <nav class="nav-container">
+                <section>
+                  <%= link_to root_path do %>
+                    <h1 class="circled-element">
+                    <%= image_tag 'opinions-icon.svg', class:'logo' %>
+                    </h1>
+                  <% end %>
+                </section>
+                <div class="nav-menu">
+                  <p>
+                    <%= display_user_signup_or_login %>
+                  </p>
+                </div>
+              </nav>
+            </header>
+            <div class="notification-place">
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
+            </div>
+            <div class="main-content">
+              <%= yield %>
+            </div>
+        </div>
+      </main>
   </body>
 </html>

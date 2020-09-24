@@ -1,0 +1,82 @@
+
+// widths
+.width-10 {
+  width: 10%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-70 {
+  width: 70%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-95 {
+  width: 95%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+// paddings and margins
+$spaceAmount: (0, 1, 2, 3, 4, 5);
+
+@each $space in $spaceAmount {
+  .margin-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  .margin-x-#{$space} {
+    margin: 0 #{$space}rem;
+  }
+
+  .margin-y-#{$space} {
+    margin: #{$space}rem 0;
+  }
+
+  .margin-b-#{$space} {
+    margin-bottom: #{$space}rem;
+  }
+
+  .margin-t-#{$space} {
+    margin-top: #{$space}rem;
+  }
+
+  .padding-#{$space} {
+    padding: #{$space}rem;
+  }
+
+  .padding-x-#{$space} {
+    padding: 0 #{$space}rem;
+  }
+
+  .padding-y-#{$space} {
+    padding: #{$space}rem 0;
+  }
+}

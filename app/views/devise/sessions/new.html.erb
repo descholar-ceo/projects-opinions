@@ -1,0 +1,24 @@
+<h2 class="centered-text margin-b-1">Log in</h2>
+
+<%= form_for(
+  resource,
+  as: resource_name,
+  url: session_path(resource_name),
+  html: {class: 'auth-form rounded-corners-full width-60'}) do |f| %>
+
+  <div class="field width-90 centered-horizontal">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'rounded-corners-half width-100' %>
+  </div>
+
+  <div class="field width-90 centered-horizontal">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: 'rounded-corners-half width-100' %>
+  </div>
+
+  <%= display_remember_me(f) %>
+
+  <div class="actions width-90 centered-horizontal">
+    <%= f.submit "Log in", class: 'button-secondary width-100' %>
+  </div>
+<% end %>

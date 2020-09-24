@@ -1,0 +1,121 @@
+@import 'variables';
+
+// buttons
+%button {
+  display: inline-block;
+  border: none;
+  margin: 0.2rem;
+  outline: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.white-text,
+%white-text {
+  color: $white-color;
+}
+
+.rounded-corners-half,
+%rounded-corners-half {
+  border-radius: 0.5rem;
+}
+
+.rounded-corners-full {
+  border-radius: 1rem;
+}
+
+.circled-element {
+  border-radius: 100%;
+}
+
+.button-primary {
+  @extend %button;
+  @extend %white-text;
+  @extend %rounded-corners-half;
+
+  background-color: $primary-color;
+}
+
+.button-secondary {
+  @extend %button;
+  @extend %white-text;
+  @extend %rounded-corners-half;
+
+  background-color: $secondary-color;
+}
+
+.centered-horizontal {
+  margin: 0 auto;
+}
+
+.centered-h-v {
+  display: grid;
+  place-items: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.white-bg {
+  background-color: $white-color;
+}
+
+.primary-bg {
+  background-color: $primary-color;
+}
+
+// borders
+.bordered-b-third {
+  border-bottom: 1px solid $fith-color;
+}
+
+.bordered-t-third {
+  border-top: 1px solid $fith-color;
+}
+
+// text
+.text-black-color {
+  color: $black-color;
+}
+
+.text-fith-color {
+  color: $fith-color;
+}
+
+.text-primary-color {
+  color: $primary-color;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.text-rightside {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-small {
+  font-size: 0.7rem;
+}
+
+.link {
+  color: $primary-color;
+}
+
+.active {
+  background-color: $primary-color;
+}
+
+.border-b-primary {
+  border-bottom: 2px solid $primary-color;
+}

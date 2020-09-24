@@ -1,0 +1,51 @@
+<div class="homepage-container">
+  <div class="opinion-list">
+    <nav class="opinion-list-nav width-100 margin-b-1">
+      <ul class="width-95 centered-horizontal margin-b-0">
+        <li class="padding-1 border-b-primary">
+          <%=link_to 'Opinions', opinions_path, class: 'text-uppercase text-black-color text-bold'%>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+    <div class="opinion-form white-bg width-95 padding-y-1 rounded-corners-half">
+      <%=form_for(@opinion) do |f| %>
+      <div class="width-100">
+        <h3 class="width-95 centered-horizontal padding-y-1">
+          <%= f.label :text, "Do you have some opinion on your mind?", class:"text-fith-color" %>
+        </h3>
+        <div class="new-opinion-container">
+        <%= f.text_area(
+          :text,
+          autofocus: true,
+          autocomplete: "text",
+          class: 'rounded-corners-half width-95 padding-1 opinion-text-area',
+          placeholder:"Post a new opinion here..."
+          )%>
+        </div>
+        <div class="width-95 centered-horizontal">
+          <%= f.submit 'Send opinion', class: 'button-primary width-40' %>
+        </div>
+      </div>
+      <%end%>
+    </div>
+    <div class="white-bg width-95 margin-y-1 padding-y-1 padding-x-2 rounded-corners-half">
+      <h2 class="text-uppercase text-primary-color bordered-b-third width-95 padding-y-1 centered-horizontal">
+      <%=@opinions.count%> Opinions in total</h2>
+      <div class="margin-y-1 width-100"></div>
+      <%=display_opinions_list(@opinions)%>
+    </div>
+  </div>
+<div class="homepage-right-side">
+  <nav class="width-100 margin-b-1">
+    <ul class="width-90 bordered-b-third centered-horizontal margin-b-0">
+      <li class="padding-1 opinion-li text-bold centered-text text-fith-color text-uppercase">Who to follow </li>
+    </ul>
+  </nav>
+  <div class="width-90 padding-y-1 centered-horizontal">
+    <%=display_who_to_follow_list(@who_to_follow)%>
+  </div>
+</div>
+</div>

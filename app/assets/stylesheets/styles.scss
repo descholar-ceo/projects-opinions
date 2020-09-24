@@ -1,0 +1,229 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: $black-color;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: $white-color;
+  text-decoration: none;
+  margin-right: 20px;
+
+  h1 {
+    color: $white-color;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 100%;
+  width: 100%;
+}
+
+aside {
+  background-color: $secondary-color;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+
+  nav {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+
+    h1 {
+      height: fit-content;
+      width: fit-content;
+      padding: 0.5rem;
+      border: 1px solid $white-color;
+      display: grid;
+      place-items: center;
+    }
+  }
+}
+
+.auth-form {
+  background-color: $third-color-transparent;
+  padding: 5%;
+  margin: 2% auto;
+
+  input {
+    padding: 0.2rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .remember-me {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.notice {
+  color: $primary-color;
+  text-align: center;
+  width: 100%;
+}
+
+.alert {
+  color: $danger-color;
+  text-align: center;
+  width: 100%;
+}
+
+.notification-place {
+  height: 20px;
+  background-color: $fourth-color;
+}
+
+.main-content {
+  background-color: $fourth-color;
+  height: fit-content;
+}
+
+.homepage-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  .opinion-list {
+    border-right: 1px solid $fith-color;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-right-side {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.new-opinion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opinion-list-nav {
+  height: 52px;
+  border-bottom: 1px solid $fith-color;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 6fr;
+    cursor: pointer;
+  }
+}
+
+.opinion-text-area {
+  outline: none;
+}
+
+.individual-opinion-container,
+.individual-comment,
+.comment-form-container {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+}
+
+.comment-form-container {
+  form {
+    input {
+      padding: 0.4rem;
+      outline: none;
+      border: 1px solid $secondary-color;
+    }
+  }
+}
+
+.aside-nav-1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  height: 80px;
+  padding: 0.5rem;
+  place-items: center;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.aside-nav-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 72px;
+
+  div {
+    border: 1px solid $black-color;
+    padding: 0.5rem;
+  }
+}
+
+.cover-image-nav,
+.right-side-user-head {
+  display: grid;
+  place-items: center;
+  height: 185px;
+}
+
+.cover-image {
+  height: 100%;
+  width: 250px;
+}
+
+.user-img {
+  height: 50px;
+  width: 50px;
+}
+
+.rigth-side-stats-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid $fith-color;
+  border-top: 1px solid $fith-color;
+
+  div:not(:last-child) {
+    border-right: 1px solid $fith-color;
+  }
+}
+
+.individual-rightside-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.follow-button {
+  height: 32px;
+}
