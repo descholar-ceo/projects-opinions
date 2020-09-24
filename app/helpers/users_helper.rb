@@ -66,7 +66,7 @@ module UsersHelper
   end
 
   def display_opinions_list(passed_arg)
-    puts "This is the array of passed opinions #{passed_arg}"
+    
     m_opinions = if passed_arg.is_a? User
                    passed_arg.opinions
                  else
