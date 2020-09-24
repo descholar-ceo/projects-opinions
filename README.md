@@ -57,14 +57,14 @@ This project was done for learning purpose, the aim was to create a customized c
 - Run `bundle install && yarn` to install gems and dependencies
 - Run `bundle exec rake db:create` to create databases that are being used with this project
 - Run `bundle exec rake db:migrate` to migrate (create) all of the tables needed by this project
+- Create a file in `config/` folder and call it `master.key`
+- Copy and Paste this key `7199dfd980f347f649f3d356fd5cd3b2` in that file `master.key`
+- Make sure that your computer clock is on the right time
 
 ### Usage
 - Run `bin/rails server` to start the server, normally after the server started, you should be able to access the projects-opinion app on `http://localhost:3000` or `http://127.0.0.1:3000` or `http://0.0.0.0:3000` in your browser
 
 ### Tests
-- Create a file in `config/` folder and call it `master.key`
-- Copy and Paste this key `7199dfd980f347f649f3d356fd5cd3b2` in that file `master.key`
-- Make sure that your computer clock is on the right time
 - Run this command `bundle exec rspec` to run tests
 
 ## Contributions
