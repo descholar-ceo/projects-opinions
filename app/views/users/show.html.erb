@@ -37,28 +37,7 @@
     <div class="white-bg width-95 margin-y-1 padding-y-1 padding-x-2 rounded-corners-half">
       <h2 class="text-primary-color bordered-b-third width-95 padding-y-1 centered-horizontal text-uppercase">All opinions </h2>
       <div class="margin-y-1 width-100"></div>
-      <%@user.opinions.includes(:user).each do |opinion|%>
-        <div class="individual-opinion-container width-100 margin-y-1">
-          <%=image_tag opinion.user.photo, class:"width-100 rounded-corners-half"%>
-          <div class="opinion-content margin-x-1">
-            <h3><%=link_to opinion.user.full_name, user_path(opinion.user), class: 'text-black-color' %></h3>
-            <p class="text-fith-color margin-y-1">
-              <%=opinion.text%>
-            </p>
-          </div>
-        </div>
-        <div>
-          <%=display_comments_list(opinion)%>
-            <div class="comment-form-container">
-              <div></div>
-              <%= form_for(opinion.comments.new, url: comments_path(opinion_id: opinion),
-              class: 'comment-form bordered-t-third') do |form| %>
-                <%= form.text_field :body,  class: 'width-70 rounded-corners-half', placeholder: 'Comment on this opinion...' %>
-                <%= form.submit 'Comment', class: 'button-secondary width-20' %>
-              <% end %>
-            </div>
-          </div>
-      <%end%>
+      <%=display_opinions_list(@user)%>
     </div>
 
   </div>

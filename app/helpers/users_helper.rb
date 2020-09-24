@@ -32,31 +32,64 @@ module UsersHelper
     end
   end
 
-  def display_comments_list(opinion)
-    opinion.comments.includes(:user).each do |comment|
-      return "
-      <p class=\"text-small text-rightside text-third-color\">#{opinion.comments.count} comments</p>
-      <div class=\"individual-comment\">
-        <div></div>
-        <p class=\"bordered-t-third\">
-          #{link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'}:
-          #{comment.body}
-        </p>
-      </div>".html_safe
-    end
-  end
-
   def display_followers_list(user)
     user.my_followers.each do |follower|
       return "<div class=\"individual-opinion-container margin-y-2\">
-        #{image_tag follower.photo, class:'width-100 circled-element'}
+        #{image_tag follower.photo, class: 'width-100 circled-element'}
         <div class=\"opinion-content margin-x-1\">
-          <h3>#{link_to follower.full_name, user_path(follower), class: "text-fith-color"}</h3>
+          <h3>#{link_to follower.full_name, user_path(follower), class: 'text-fith-color'}</h3>
           <p  class=\"text-fith-color text-small\" >
             @#{link_to follower.username, user_path(follower), class: 'text-fith-color '}
           </p>
         </div>
       </div>".html_safe
     end
+  end
+
+  def display_opinions_list(user)
+    res = ''
+    user.opinions.includes(:user).each do |opinion|
+      res << "
+      <div class=\"individual-opinion-container width-100\">
+        #{image_tag opinion.user.photo, class: 'width-100 rounded-corners-half'}
+        <div class=\"opinion-content margin-x-1\">
+          <h3>#{link_to opinion.user.full_name, user_path(opinion.user), class: 'text-black-color'}</h3>
+          <p class=\"text-fith-color margin-y-1\">#{opinion.text}</p>
+        </div>
+      </div>
+      <div class=\"margin-b-3\">
+        #{display_comments_list(opinion)}
+        <div class=\"comment-form-container\">
+          <div></div>
+          #{display_form(opinion)}
+        </div>
+      </div>"
+    end
+    res.html_safe
+  end
+
+  private
+
+  def display_comments_list(opinion)
+    res = ''
+    res << "<p class=\"text-small text-rightside text-third-color\">#{opinion.comments.count} comment(s)</p>"
+    opinion.comments.includes(:user).each do |comment|
+      res << "
+      <div class=\"individual-comment\">
+        <div></div>
+        <p class=\"bordered-t-third\">
+          #{link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'}:
+          #{comment.body}
+        </p>
+      </div>"
+    end
+    res.html_safe
+  end
+
+  def display_form(opinion)
+    fields = form_for(opinion.comments.new, url: comments_path(opinion_id: opinion), class: 'comment-form') do |f|
+      f.text_field :body, class: 'width-100 rounded-corners-half', placeholder: 'Comment on this opinion...'
+    end
+    fields
   end
 end
