@@ -33,8 +33,9 @@ module UsersHelper
   end
 
   def display_followers_list(user)
+    followers = ''
     user.my_followers.each do |follower|
-      return "<div class=\"individual-opinion-container margin-y-2\">
+      followers << "<div class=\"individual-opinion-container margin-y-2\">
         #{image_tag follower.photo, class: 'width-100 circled-element'}
         <div class=\"opinion-content margin-x-1\">
           <h3>#{link_to follower.full_name, user_path(follower), class: 'text-fith-color'}</h3>
@@ -42,13 +43,21 @@ module UsersHelper
             @#{link_to follower.username, user_path(follower), class: 'text-fith-color '}
           </p>
         </div>
-      </div>".html_safe
+      </div>"
     end
+    followers.html_safe
   end
 
-  def display_opinions_list(user)
+  def display_opinions_list(passed_arg)
+    puts "This is the array of passed opinions #{passed_arg}"
+    m_opinions = if passed_arg.is_a? User
+                   passed_arg.opinions
+                 else
+                   passed_arg
+                 end
+
     res = ''
-    user.opinions.includes(:user).each do |opinion|
+    m_opinions.includes(:user).each do |opinion|
       res << "
       <div class=\"individual-opinion-container width-100\">
         #{image_tag opinion.user.photo, class: 'width-100 rounded-corners-half'}
