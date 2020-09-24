@@ -94,17 +94,7 @@
     </ul>
   </nav>
   <div class="width-90 padding-y-1 centered-horizontal">
-    <%@user.my_followers.each do |follower|%>
-      <div class="individual-opinion-container margin-y-2">
-        <%=image_tag follower.photo, class:'width-100 circled-element'%>
-        <div class="opinion-content margin-x-1">
-          <h3><%=link_to follower.full_name, user_path(follower), class: "text-fith-color" %></h3>
-          <p  class="text-fith-color text-small" >
-            @<%= link_to follower.username, user_path(follower), class: 'text-fith-color ' %>
-          </p>
-        </div>
-      </div>
-    <%end%>
+    <%=display_followers_list(@user)%>
   </div>
 </div>
 </div>

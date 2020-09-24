@@ -34,7 +34,7 @@ module UsersHelper
 
   def display_comments_list(opinion)
     opinion.comments.includes(:user).each do |comment|
-      "
+      return "
       <p class=\"text-small text-rightside text-third-color\">#{opinion.comments.count} comments</p>
       <div class=\"individual-comment\">
         <div></div>
@@ -42,6 +42,20 @@ module UsersHelper
           #{link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'}:
           #{comment.body}
         </p>
+      </div>".html_safe
+    end
+  end
+
+  def display_followers_list(user)
+    user.my_followers.each do |follower|
+      return "<div class=\"individual-opinion-container margin-y-2\">
+        #{image_tag follower.photo, class:'width-100 circled-element'}
+        <div class=\"opinion-content margin-x-1\">
+          <h3>#{link_to follower.full_name, user_path(follower), class: "text-fith-color"}</h3>
+          <p  class=\"text-fith-color text-small\" >
+            @#{link_to follower.username, user_path(follower), class: 'text-fith-color '}
+          </p>
+        </div>
       </div>".html_safe
     end
   end
