@@ -31,4 +31,18 @@ module UsersHelper
       ''
     end
   end
+
+  def display_comments_list(opinion)
+    opinion.comments.includes(:user).each do |comment|
+      "
+      <p class=\"text-small text-rightside text-third-color\">#{opinion.comments.count} comments</p>
+      <div class=\"individual-comment\">
+        <div></div>
+        <p class=\"bordered-t-third\">
+          #{link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'}:
+          #{comment.body}
+        </p>
+      </div>".html_safe
+    end
+  end
 end
