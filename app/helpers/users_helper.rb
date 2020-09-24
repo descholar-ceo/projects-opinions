@@ -112,9 +112,9 @@ module UsersHelper
     res << "<p class=\"text-small text-rightside text-third-color\">#{opinion.comments.count} comment(s)</p>"
     opinion.comments.includes(:user).each do |comment|
       res << "
-      <div class=\"individual-comment\">
+      <div class=\"individual-comment margin-y-1\">
         <div></div>
-        <p class=\"bordered-t-third\">
+        <p class=\"bordered-t-third padding-1\">
           #{link_to comment.user.full_name, user_path(comment.user.id), class: 'text-bold text-black-color'}:
           #{comment.body}
         </p>
