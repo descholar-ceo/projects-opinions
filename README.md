@@ -38,7 +38,6 @@ This project was done for learning purpose, the aim was to create a customized c
 - [RSpec](https://rspec.info/) for testing
 - [Capybara](http://teamcapybara.github.io/capybara/) for integration tests
 - [Travis CI](https://travis-ci.org/) for continuous integration
-- [Simplecov](https://github.com/simplecov-ruby/simplecov) and [Coveralls](https://coveralls.io/) for counting and reporting code coverage
 - [Stylelint](https://stylelint.io/) and [Rubocop](https://rubocop.org/) for code linting and formatting
 - [Cloudinary](https://cloudinary.com/) for saving pictures
 - [Heroku](https://heroku.com/) for deployment
