@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/descholar-ceo/projects-opinions.svg?branch=develop)](https://travis-ci.org/descholar-ceo/projects-opinions)  ![Linters](https://github.com/descholar-ceo/projects-opinions/workflows/Linters/badge.svg)  [![Coverage Status](https://coveralls.io/repos/github/descholar-ceo/projects-opinions/badge.svg?branch=develop)](https://coveralls.io/github/descholar-ceo/projects-opinions?branch=develop)
 
 ## Project description
-The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application which is available for anyone who has a project opinion to share, and other registered users will be able to comment on that opinion. I have listed all the [features](#Features) available on this app.
+The [Projects Opinions](https://projects-opinions.herokuapp.com/) is an application that is available for anyone who has a project opinion to share, and other registered users will be able to comment on that opinion. I have listed all the [features](#Features) available on this app.
 
-I did this project to master Rails. The aim was to implement the design of [Twitter redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) by [Gregoire Vella](https://www.behance.net/gregoirevella) but with customized content. This project is my capstone from [Microverse](https://www.microverse.org/). It is an MVP (Minimal Viable Product) which means it has only basic features to demonstrate a big picture of a final product. Project specifications are listed [here](https://www.notion.so/Twitter-redesign-f8a8d48453d54d1a949bb0ceab4c8718)
+I did this project to master Rails. The aim was to implement the design of [Twitter redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details) by [Gregoire Vella](https://www.behance.net/gregoirevella) but with customized content. This project is my capstone from [Microverse](https://www.microverse.org/). It is an MVP (Minimal Viable Product), which means it has only basic features to demonstrate a big picture of a final product. Project specifications are listed [here](https://www.notion.so/Twitter-redesign-f8a8d48453d54d1a949bb0ceab4c8718).
 
 ## Screenshots
 | Homepage && Opnions page | Profile page && User page |
